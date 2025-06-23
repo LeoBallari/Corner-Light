@@ -1,0 +1,181 @@
+--release
+--output
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects
+--lib
+C:\Android\resources_11_22\platforms\android-33\android.jar
+C:\Android\resources_11_22\tools\..\extras\b4a_local\unpacked-b4ashared-63837488556000\dex_v1\b4ashared.zip
+c:\android\resources_11_22\tools\..\extras\b4a_remote\androidx\core\core\1.9.0\unpacked-core-1.9.0\jars\classes.zip
+c:\android\resources_11_22\tools\..\extras\b4a_remote\androidx\core\core-ktx\1.9.0\unpacked-core-ktx-1.9.0\jars\classes.zip
+c:\android\resources_11_22\tools\..\extras\b4a_remote\androidx\annotation\annotation-experimental\1.3.0\unpacked-annotation-experimental-1.3.0\jars\classes.zip
+c:\android\resources_11_22\tools\..\extras\b4a_remote\androidx\lifecycle\lifecycle-runtime\2.5.1\unpacked-lifecycle-runtime-2.5.1\jars\classes.zip
+c:\android\resources_11_22\tools\..\extras\b4a_remote\androidx\versionedparcelable\versionedparcelable\1.1.1\unpacked-versionedparcelable-1.1.1\jars\classes.zip
+C:\Android\resources_11_22\tools\..\extras\b4a_local\unpacked-core-63837488558000\dex_v1\core.zip
+C:\Android\resources_11_22\tools\..\extras\b4a_local\unpacked-phone-63837488558000\dex_v1\phone.zip
+C:\Android\resources_11_22\tools\..\extras\b4a_local\unpacked-randomaccessfile-63837488558000\dex_v1\randomaccessfile.zip
+C:\Android\resources_11_22\tools\..\extras\b4a_local\unpacked-runtimepermissions.androidx-63837488558000\dex_v1\runtimepermissions.zip
+C:\Android\resources_11_22\tools\..\extras\b4a_local\unpacked-serial-63837488558000\dex_v1\serial.zip
+C:\Android\resources_11_22\tools\..\extras\b4a_local\unpacked-xui-63837488558000\dex_v1\xui.zip
+C:\Android\resources_11_22\tools\..\extras\b4a_local\unpacked-reflection-63837488558000\dex_v1\reflection.zip
+C:\Android\resources_11_22\tools\..\extras\b4a_local\unpacked-bitmapcreator-63837488558000\dex_v1\bitmapcreator.zip
+C:\Android\resources_11_22\tools\..\extras\b4a_local\unpacked-dateutils-63837488558000\dex_v1\dateutils.zip
+C:\Android\resources_11_22\tools\..\extras\b4a_local\unpacked-xcustomlistview-63837488558000\dex_v1\xcustomlistview.zip
+C:\Android\resources_11_22\tools\..\extras\b4a_local\unpacked-ime-63837488558000\dex_v1\ime.zip
+C:\Android\resources_11_22\tools\..\extras\b4a_local\unpacked-javaobject-63837488558000\dex_v1\javaobject.zip
+C:\Android\resources_11_22\tools\..\extras\b4a_local\unpacked-stringutils-63837488558000\dex_v1\stringutils.zip
+C:\Android\resources_11_22\tools\..\extras\b4a_local\unpacked-remotelogger-63837488558000\dex_v1\remotelogger.zip
+c:\android\resources_11_22\tools\..\extras\b4a_remote\androidx\annotation\annotation\1.5.0\annotation-1.5.0.zip
+c:\android\resources_11_22\tools\..\extras\b4a_remote\androidx\arch\core\core-common\2.1.0\core-common-2.1.0.zip
+c:\android\resources_11_22\tools\..\extras\b4a_remote\androidx\lifecycle\lifecycle-common\2.5.1\lifecycle-common-2.5.1.zip
+c:\android\resources_11_22\tools\..\extras\b4a_remote\androidx\lifecycle\lifecycle-common-java8\2.5.1\lifecycle-common-java8-2.5.1.zip
+c:\android\resources_11_22\tools\..\extras\b4a_remote\androidx\collection\collection\1.2.0\collection-1.2.0.zip
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\androidx\annotation\experimental\R$attr.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\androidx\annotation\experimental\R$color.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\androidx\annotation\experimental\R$dimen.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\androidx\annotation\experimental\R$drawable.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\androidx\annotation\experimental\R$id.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\androidx\annotation\experimental\R$integer.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\androidx\annotation\experimental\R$layout.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\androidx\annotation\experimental\R$string.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\androidx\annotation\experimental\R$style.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\androidx\annotation\experimental\R$styleable.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\androidx\annotation\experimental\R.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\androidx\core\R$attr.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\androidx\core\R$color.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\androidx\core\R$dimen.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\androidx\core\R$drawable.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\androidx\core\R$id.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\androidx\core\R$integer.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\androidx\core\R$layout.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\androidx\core\R$string.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\androidx\core\R$style.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\androidx\core\R$styleable.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\androidx\core\R.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\androidx\core\ktx\R$attr.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\androidx\core\ktx\R$color.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\androidx\core\ktx\R$dimen.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\androidx\core\ktx\R$drawable.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\androidx\core\ktx\R$id.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\androidx\core\ktx\R$integer.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\androidx\core\ktx\R$layout.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\androidx\core\ktx\R$string.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\androidx\core\ktx\R$style.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\androidx\core\ktx\R$styleable.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\androidx\core\ktx\R.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\androidx\lifecycle\runtime\R$attr.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\androidx\lifecycle\runtime\R$color.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\androidx\lifecycle\runtime\R$dimen.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\androidx\lifecycle\runtime\R$drawable.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\androidx\lifecycle\runtime\R$id.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\androidx\lifecycle\runtime\R$integer.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\androidx\lifecycle\runtime\R$layout.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\androidx\lifecycle\runtime\R$string.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\androidx\lifecycle\runtime\R$style.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\androidx\lifecycle\runtime\R$styleable.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\androidx\lifecycle\runtime\R.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\animatedcounter.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\anotherprogressbar$ResumableSub_BusyLoop.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\anotherprogressbar.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\asbuttonslider.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\asrangeseekbar.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\b4xbreadcrumb.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\b4xcolortemplate$ResumableSub_Show.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\b4xcolortemplate$_colorpickerpart.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\b4xcolortemplate.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\b4xcombobox$ResumableSub_RaiseEvent.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\b4xcombobox.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\b4xdatetemplate$ResumableSub_Show.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\b4xdatetemplate.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\b4xdialog$ResumableSub_Show.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\b4xdialog$ResumableSub_ShowCustom.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\b4xdialog$ResumableSub_ShowTemplate.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\b4xdialog.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\b4xfloattextfield$ResumableSub_SwitchFromPasswordToRegular.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\b4xfloattextfield.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\b4xformatter$_b4xformatdata.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\b4xformatter.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\b4ximageview.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\b4xinputtemplate$ResumableSub_Show.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\b4xinputtemplate.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\b4xlisttemplate$ResumableSub_Show.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\b4xlisttemplate.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\b4xloadingindicator$ResumableSub_MainLoop.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\b4xloadingindicator.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\b4xlongtexttemplate.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\b4xplusminus$ResumableSub_StartDownLoop.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\b4xplusminus.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\b4xradiobutton$ResumableSub_SetValueImpl.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\b4xradiobutton.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\b4xsearchtemplate$ResumableSub_Show.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\b4xsearchtemplate.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\b4xseekbar.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\b4xsignaturetemplate.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\b4xswitch$ResumableSub_SetValueImpl.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\b4xswitch.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\b4xtimedtemplate$ResumableSub_Show.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\b4xtimedtemplate.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\bluetoothmanager$_nameandmac.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\bluetoothmanager.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\chatactivity$1.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\chatactivity$B4AMenuItemsClickListener.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\chatactivity$HandleKeyDelayed.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\chatactivity$ResumeMessage.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\chatactivity$WaitForLayout.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\chatactivity.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\configactivity$1.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\configactivity$B4AMenuItemsClickListener.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\configactivity$HandleKeyDelayed.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\configactivity$ResumableSub_btn_calibrar_LongClick.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\configactivity$ResumableSub_mnuGuardarPerfil_click.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\configactivity$ResumableSub_mnuRecuperarPerfil_click.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\configactivity$ResumeMessage.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\configactivity$WaitForLayout.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\configactivity$_perfil_ruta.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\configactivity$_perfil_urbano.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\configactivity.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\diagnosticoactivity$1.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\diagnosticoactivity$B4AMenuItemsClickListener.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\diagnosticoactivity$HandleKeyDelayed.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\diagnosticoactivity$ResumableSub_btn_calibrar_LongClick.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\diagnosticoactivity$ResumeMessage.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\diagnosticoactivity$WaitForLayout.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\diagnosticoactivity.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\gauge$ResumableSub_AnimateValueTo.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\gauge$_gaugerange.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\gauge.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\hvseekbar.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\madewithlove.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\main$1.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\main$B4AMenuItemsClickListener.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\main$HandleKeyDelayed.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\main$ResumableSub_ASButtonSlider1_ReachedRightBottom.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\main$ResumableSub_DiscoverFinished.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\main$ResumeMessage.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\main$WaitForLayout.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\main$_configuracion.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\main.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\R$attr.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\R$color.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\R$dimen.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\R$drawable.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\R$id.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\R$integer.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\R$layout.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\R$string.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\R$style.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\R$styleable.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\R.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\roundslider.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\scrollinglabel$ResumableSub_StartScrolling.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\scrollinglabel.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\starter$1.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\starter$2.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\starter$starter_BR.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\starter.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\swiftbutton.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\xuiviewsutils.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\designerscripts\LS_1.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\designerscripts\LS_2.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\designerscripts\LS_3.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\designerscripts\LS_4.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\designerscripts\LS_config.dex
+C:\Users\leand\OneDrive\Documentos\Arduino\Corner Light\Phone_App\Objects\dexed\Corner\Light\Bluetooth\designerscripts\LS_searchtemplate.dex

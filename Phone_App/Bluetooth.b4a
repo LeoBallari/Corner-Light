@@ -1,0 +1,356 @@
+﻿Build1=Default,Corner.Light.Bluetooth
+File1=1.bal
+File10=Config.bal
+File11=crysta.ttf
+File12=Desconectado.mp3
+File13=Fondo Config.png
+File14=Fondo Diagnostico.png
+File15=Fondo0.png
+File16=Fondo2.png
+File17=Forzada_off.png
+File18=Forzada_on.png
+File19=Freno_off.png
+File2=2.bal
+File20=Freno_on.png
+File21=Indicador DERECHO.png
+File22=indicador derecho1.png
+File23=Indicador IZQUIERDO.png
+File24=indicador izquierdo1.png
+File25=Indicadores Apagados.png
+File26=logo_ico_rojo.png
+File27=logo_ico_verde.png
+File28=Sonido_off.png
+File29=Sonido_on.png
+File3=3.bal
+File4=4.bal
+File5=aro.png
+File6=Automatico_off.png
+File7=Automatico_on.png
+File8=Centro.png
+File9=Conectado.mp3
+FileGroup1=Default Group
+FileGroup10=Default Group
+FileGroup11=Default Group
+FileGroup12=Default Group
+FileGroup13=Default Group
+FileGroup14=Default Group
+FileGroup15=Default Group
+FileGroup16=Default Group
+FileGroup17=Default Group
+FileGroup18=Default Group
+FileGroup19=Default Group
+FileGroup2=Default Group
+FileGroup20=Default Group
+FileGroup21=Default Group
+FileGroup22=Default Group
+FileGroup23=Default Group
+FileGroup24=Default Group
+FileGroup25=Default Group
+FileGroup26=Default Group
+FileGroup27=Default Group
+FileGroup28=Default Group
+FileGroup29=Default Group
+FileGroup3=Default Group
+FileGroup4=Default Group
+FileGroup5=Default Group
+FileGroup6=Default Group
+FileGroup7=Default Group
+FileGroup8=Default Group
+FileGroup9=Default Group
+Group=Default Group
+Library1=asbuttonslider
+Library2=core
+Library3=phone
+Library4=randomaccessfile
+Library5=runtimepermissions
+Library6=serial
+Library7=xui
+Library8=xui views
+Library9=asrangeseekbar
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="26"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~'CreateResourceFromFile(Macro, Themes.LightTheme)~\n~CreateResourceFromFile(Macro, Themes.DarkTheme)~\n~'End of default text.~\n~AddManifestText(<uses-feature android:name="android.hardware.sensor.accelerometer"~\n~        android:required="true" />)~\n~~\n~AddManifestText(<uses-feature android:name="android.hardware.sensor.magnetic"~\n~        android:required="true" />)~\n~
+Module1=BluetoothManager
+Module2=ChatActivity
+Module3=ConfigActivity
+Module4=DiagnosticoActivity
+Module5=Gauge
+Module6=HVSeekbar
+Module7=Starter
+NumberOfFiles=29
+NumberOfLibraries=9
+NumberOfModules=7
+Version=12.8
+@EndOfDesignText@
+#Region Module Attributes
+	#FullScreen: False
+	#IncludeTitle: False
+	#ApplicationLabel: Corner Light Bluetooth
+	#VersionCode: 1
+	#VersionName: 
+	'SupportedOrientations possible values: unspecified, landscape or portrait.
+	#SupportedOrientations: landscape
+	#CanInstallToExternalStorage: False
+#End Region
+#BridgeLogger: true
+
+Sub Process_Globals
+	'Dim Phone1 As Phone
+	
+	Private rp As RuntimePermissions
+	Public Simulador As Boolean
+	Dim dispo As NameAndMac
+	
+	Type Configuracion(Nombre_BT As String, Mac_BT As String)
+	
+	Dim Serial1 As Serial
+End Sub
+
+Sub Globals
+	Private xui As XUI
+	Private ASButtonSlider1 As ASButtonSlider
+	Private img_activado As ImageView
+	Private btn_config As Button
+	Private pn_menu As Panel
+	Private btn_simulador As Button
+	Private btn_buscar_dispo As Button
+	Private btn_olvidar_dispo As Button
+	Private img_fondo As ImageView
+End Sub
+
+Sub Activity_Create(FirstTime As Boolean)
+	Activity.LoadLayout("1")
+	
+	CreateLabel(ASButtonSlider1.SliderButtonPnl,Chr(0xF07E),xui.CreateFontAwesome(30))
+	CreateLabel(ASButtonSlider1.LeftTopPnl,"Salir",xui.CreateDefaultBoldFont(30))
+	CreateLabel(ASButtonSlider1.RightBottomPnl,"Inciar",xui.CreateDefaultBoldFont(30))
+
+	If FirstTime Then
+		pn_menu.Visible=False
+		Serial1.Initialize("Serial1")
+	End If
+	
+	'Phone1.SetScreenOrientation(-1) ' las dos opciones (horizontal y vertical)
+	'Phone1.SetScreenOrientation(0) ' horizontal
+	'Phone1.SetScreenOrientation(0) ' vertical
+End Sub
+
+Private Sub men_Emparejados
+	Dim PairedDevices As Map
+	PairedDevices = Serial1.GetPairedDevices
+	Dim l As List
+	l.Initialize
+	For i = 0 To PairedDevices.Size - 1
+		l.Add(PairedDevices.GetKeyAt(i))
+	Next
+	Dim res As Int
+	res = InputList(l, "Seleccione un dispositivo emparejado", -1)	
+	
+	If res <> DialogResponse.CANCEL Then
+		Log(PairedDevices.Get(l.get(res)))
+
+		Dim device As NameAndMac
+		device.Name = "Corner Light"
+		device.Mac  = PairedDevices.Get(l.Get(res))
+		
+		
+		GuardoBTemparejado(device.Name,device.Mac)
+		Starter.Manager.ConnectTo(device)
+		
+		img_activado.Visible=True
+		ProgressDialogShow2($"Intentando conectarme a: ${device.Name} (${device.Mac})"$, False)
+	End If
+End Sub
+
+Private Sub men_desemparejar
+	Dim rm As RandomAccessFile
+	Dim conf As Configuracion
+		
+	conf.Initialize
+	rm.Initialize(File.DirInternal,"datos.conf",False)
+		
+	conf.Nombre_BT= ""
+	conf.Mac_BT=""
+		
+	rm.WriteEncryptedObject(conf,"123",0)
+	rm.Close
+	ToastMessageShow("Dispositivos olvidados",True)
+End Sub
+
+Private Sub men_Buscar_click
+	Dim success As Boolean = Starter.Manager.SearchForDevices
+	
+	If success = False Then
+		ToastMessageShow("Error al iniciar el proceso de descubrimiento.", True)
+	Else
+		ProgressDialogShow2("Buscando Dispositivos...", False)
+	End If
+End Sub
+
+Private Sub CreateLabel(Parent As B4XView,Text As String,Font As B4XFont)
+	Dim tmp_lbl As Label
+	tmp_lbl.Initialize("")
+	Dim xtmp_lbl As B4XView = tmp_lbl
+	
+	Parent.AddView(xtmp_lbl,0,0,Parent.Width,Parent.Height)
+	xtmp_lbl.Font = Font
+	xtmp_lbl.Text = Text
+	xtmp_lbl.SetTextAlignment("CENTER","CENTER")
+	xtmp_lbl.TextColor = xui.Color_White
+End Sub
+
+Sub Activity_Resume
+	'UpdateState
+	Simulador=False
+	If pn_menu.Visible=True Then
+		pn_menu.Visible=False
+	End If
+		
+	If img_activado.Visible=True Then
+		img_activado.Visible=False
+	End If
+End Sub
+
+Public Sub UpdateState
+	'btnSearchForDevices.Enabled = Starter.Manager.BluetoothState
+End Sub
+
+Sub Activity_Pause (UserClosed As Boolean)
+End Sub
+
+
+Public Sub DiscoverFinished
+	ProgressDialogHide
+	If Starter.Manager.foundDevices.Size = 0 Then
+		ToastMessageShow("Ningún dispositivo encontrado.", True)
+	Else
+		Dim l As List
+		l.Initialize
+		For Each nm As NameAndMac In Starter.Manager.foundDevices
+			If nm.Name <> "" Then
+				l.Add(nm.Name)
+			End If
+		Next
+		InputListAsync(l, "Elija el dispositivo para conectarse", -1, True)
+		Wait For InputList_Result (Index As Int)
+		If Index <> DialogResponse.CANCEL Then
+			Dim device As NameAndMac = Starter.Manager.foundDevices.Get(Index)
+			
+			GuardoBTemparejado(device.Name,device.Mac)
+			Starter.Manager.ConnectTo(device)
+			
+			ProgressDialogShow2($"Intentando conectarme a: ${device.Name} (${device.Mac})"$, False)
+		End If
+	End If
+End Sub
+
+Public Sub AfterConnect (Success As Boolean)
+	ProgressDialogHide
+End Sub
+
+Sub btnAllowConnection_Click
+	Starter.Manager.ListenForConnections
+End Sub
+
+Private Sub ASButtonSlider1_ReachedLeftTop
+	ExitApplication
+End Sub
+
+Private Sub ASButtonSlider1_ReachedRightBottom
+	Simulador=False
+	
+	rp.CheckAndRequest(rp.PERMISSION_ACCESS_COARSE_LOCATION)
+	Wait For Activity_PermissionResult (Permission As String, Result As Boolean)
+	If Result = False Then
+		ToastMessageShow("Sin autorización...", False)
+		Return
+	End If
+	
+	'aca deberia buscar si tengo Mac guardada y conectarme automaticamente
+	'sino sigo con la busqueda de dispositivos
+	dispo = BuscoBTguardados("","")
+	
+	If dispo.Name <> "" Then
+		Starter.Manager.ConnectTo(dispo)
+		ProgressDialogShow2("Conectando a...: " & dispo.Name, False)
+	Else
+		Msgbox("No hay dispositivos asociados","Corner Light")
+		img_activado.Visible=False
+	End If
+End Sub
+
+Private Sub BuscoBTguardados(nom As String,mac As String) As NameAndMac
+	Dim dispositivo As NameAndMac
+	
+	Try
+		Dim rm As RandomAccessFile
+		Dim conf As Configuracion
+		rm.Initialize(File.DirInternal,"datos.conf",False)
+		conf = rm.ReadEncryptedObject("123",0)
+		rm.Close
+		'-----Voy a harcodear el dispositivo de ANDRES ----------------
+		'------
+		If nom = "" And mac = "" Then
+			dispositivo.Name= conf.Nombre_BT
+			dispositivo.Mac=conf.Mac_BT
+		Else
+			dispositivo.Name= nom
+			dispositivo.Mac=mac
+		End If
+		Return dispositivo
+	Catch
+		ToastMessageShow("Error no hay datos guardados",True)
+		dispositivo.Name= ""
+		dispositivo.Mac = ""
+		Return dispositivo
+	End Try
+End Sub
+
+Private Sub GuardoBTemparejado(Nombre As String, Mac As String)
+	Try
+		Dim rm As RandomAccessFile
+		Dim conf As Configuracion
+		
+		conf.Initialize
+		rm.Initialize(File.DirInternal,"datos.conf",False)
+		
+		conf.Nombre_BT= Nombre
+		conf.Mac_BT=Mac
+		
+		rm.WriteEncryptedObject(conf,"123",0)
+		rm.Close
+		ToastMessageShow("Datos guardados exitosamente",True)
+	Catch
+		ToastMessageShow("Error al intentar guardar datos",True)
+	End Try
+End Sub
+
+Sub Activity_KeyPress (KeyCode As Int) As Boolean
+	If KeyCode = KeyCodes.KEYCODE_BACK Then
+		ExitApplication
+	End If
+End Sub
+
+Private Sub btn_config_Click
+	If pn_menu.Visible=False Then
+		pn_menu.Visible=True
+	Else
+		pn_menu.Visible=False
+	End If
+End Sub
+
+Private Sub btn_simulador_Click
+	Simulador=True
+	
+	StartActivity(ChatActivity)
+End Sub
+
+Private Sub btn_buscar_dispo_Click
+	men_Emparejados
+End Sub
+
+Private Sub btn_olvidar_dispo_Click
+	men_desemparejar
+End Sub
+
+Private Sub img_fondo_Click
+	pn_menu.Visible=False
+End Sub
