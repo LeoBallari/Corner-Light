@@ -1,7 +1,6 @@
 // shared_data.cpp
 
 #include "shared_data.h"
-//#include "Separador.h"
 
 // Inicialización de las variables globales
 SemaphoreHandle_t xMutex_MPU_Data = NULL;
@@ -47,12 +46,10 @@ float g_calib_y = 0;
 bool g_calibrar_flag = false;
 
 String g_NombreBT = "Corner Light";
-int g_TipoFiltro = 2;
 
 int g_perfil = 0;
 
 BluetoothSerial SerialBT;
-//Separador s;
 
 // Inicialización de variables para Madgwick
 float g_MADGWICK_BETA = 0.025f;        // Valor beta inicial, ajusta según sea necesario

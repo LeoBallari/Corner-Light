@@ -4,7 +4,7 @@
 #include "BluetoothSerial.h"
 #include <Adafruit_MPU6050.h>
 #include <Adafruit_Sensor.h>
-#include <Preferences.h> // Ya incluido en config_manager, pero lo dejamos por si acaso.
+//#include <Preferences.h> // Ya incluido en config_manager, pero lo dejamos por si acaso.
 
 // Incluye nuestros módulos
 #include "shared_data.h"
@@ -38,10 +38,6 @@ void setup() {
     Serial.println("ERROR: No se pudo inicializar Preferences. Deteniendo...");
     while(1);
   }
-  
-  // g_modo = MODO_AUTOMATICO;
-  // config_save_profile(); // Guardar los nuevos parámetros en flash
-
 
   config_load_profile(); // Cargar el perfil de configuración inicial
   config_print_all(); // Imprimir configuración cargada (para depuración)
