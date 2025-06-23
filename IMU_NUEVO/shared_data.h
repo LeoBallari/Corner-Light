@@ -7,7 +7,7 @@
 #include <freertos/FreeRTOS.h>
 #include <freertos/semphr.h>
 #include <BluetoothSerial.h>
-#include "Separador.h"
+//#include "Separador.h"
 
 // Handles de semáforos (mutex) para proteger datos compartidos
 extern SemaphoreHandle_t xMutex_MPU_Data;
@@ -73,7 +73,7 @@ extern int g_perfil; // Perfil de usuario
 extern BluetoothSerial SerialBT;
 
 // Objeto Separador (global, usado en bluetooth_handler)
-extern Separador s;
+//extern Separador s;
 
 // Configuración para filtro de Madgwick
 #define USAR_MADGWICK  // Comentar esta línea para usar el filtro complementario
