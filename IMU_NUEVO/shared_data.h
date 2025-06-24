@@ -71,7 +71,7 @@ extern int g_perfil; // Perfil de usuario
 extern BluetoothSerial SerialBT;
 
 // Configuración para filtro de Madgwick
-#define USAR_MADGWICK  // Comentar esta línea para usar el filtro complementario
+//#define USAR_MADGWICK  // Comentar esta línea para usar el filtro complementario
 extern float g_MADGWICK_BETA; // Factor beta para el filtro de Madgwick
 extern float g_MADGWICK_BETA_NORMAL;
 

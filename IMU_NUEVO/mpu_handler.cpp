@@ -199,7 +199,7 @@ void mpu_read_and_process_data() {
         }
 
         local_accel_magnitude = sqrt(g_accelX * g_accelX + g_accelY * g_accelY + g_accelZ * g_accelZ);
-        const float ACCEL_MAGNITUDE_THRESHOLD = 1;
+        const float ACCEL_MAGNITUDE_THRESHOLD = 0.5;
         if (fabs(local_accel_magnitude - GRAVEDAD) > ACCEL_MAGNITUDE_THRESHOLD) {
             local_is_moving_linearly = true; // ACA es donde digo que tengo movimiento lateral
         }
@@ -221,11 +221,7 @@ void mpu_read_and_process_data() {
 
         local_accel_angle_ema_filtered = EMALowPassFilter(accel_angle_raw);
         
-        
-        if (local_is_moving_linearly) {
-            //Serial.println("INFO: g_Roll CONGELADO por movimiento lineal.");
-        } else {
-
+        if (!local_is_moving_linearly) {
             #ifdef USAR_MADGWICK
                 // Implementación del filtro de Madgwick
                 static float q0 = 1.0f, q1 = 0.0f, q2 = 0.0f, q3 = 0.0f;
@@ -274,11 +270,11 @@ void mpu_read_and_process_data() {
                 float current_madgwick_beta; // Se define aquí, no necesita ser global
                 current_madgwick_beta = g_MADGWICK_BETA;
 
-                // if (local_is_moving_linearly) {
-                //     current_madgwick_beta = g_MADGWICK_BETA_NORMAL;
-                // } else {
-                //     current_madgwick_beta = g_MADGWICK_BETA;
-                // }
+                if (local_is_moving_linearly) {
+                    current_madgwick_beta = g_MADGWICK_BETA_NORMAL;
+                } else {
+                    current_madgwick_beta = g_MADGWICK_BETA;
+                }
                 //.............................
 
                 qDot1 = 0.5f * (-q1 * gx - q2 * gy - q3 * gz) - current_madgwick_beta * s0;
@@ -305,17 +301,26 @@ void mpu_read_and_process_data() {
                 float roll = atan2(q0*q1 + q2*q3, 0.5f - q1*q1 - q2*q2) * RAD_TO_DEG;
                 g_Roll = roll;
             #else
-                g_Roll = g_FILTRO * (g_Roll + (local_gyro_rate_post_deadband / g_GYRO_LB) * (dt_imu / 1000.0)) + 
-                (1 - g_FILTRO) * local_accel_angle_ema_filtered;
+
+                // Agregando..................
+                float current_complementario_beta; // Se define aquí, no necesita ser global
+                current_complementario_beta = g_FILTRO;
+                if (local_is_moving_linearly) {
+                    current_complementario_beta = 0.9999;
+                } 
+                //.............................
+
+                g_Roll = current_complementario_beta * (g_Roll + (local_gyro_rate_post_deadband / g_GYRO_LB) * (dt_imu / 1000.0)) + 
+                         (1 - current_complementario_beta) * local_accel_angle_ema_filtered;
             #endif
 
-                g_Roll += calib_offset_temp_val;
-                g_Roll = g_Roll + (g_gyroZ * g_YAW_ALPHA);
+            g_Roll += calib_offset_temp_val;
+            g_Roll = g_Roll + (g_gyroZ * g_YAW_ALPHA);
 
-                if (g_invertir) {
-                    g_Roll = g_Roll * -1;
-                }
+            if (g_invertir) {
+                g_Roll = g_Roll * -1;
             }
+        }
 
         // Llamar a MonitorROLL antes de liberar el mutex
         MonitorROLL(local_accel_angle_ema_filtered, 
@@ -323,7 +328,6 @@ void mpu_read_and_process_data() {
                    local_is_moving_linearly, 
                    local_accel_magnitude);
 
-        
         //MonitorRAW(a, g); // Llama a la función MonitorRAW, pasándole los datos 'a' y 'g'
 
         xSemaphoreGive(xMutex_MPU_Data);
