@@ -20,7 +20,12 @@ void process_bluetooth_data() {
   if (xSemaphoreTake(xMutex_MPU_Data, portMAX_DELAY) == pdTRUE) {
     // Generación de la cadena de salida (TU FORMATO ORIGINAL)
     cadena_bt_salida = "CL,";                                     // 00 - CARACTERES PARA DETERMINAR SI LA CADENA ES VALIDA
-    cadena_bt_salida += String(g_Roll) + ",";                     // 01 - ANGULO DE INCLINACION FINAL
+    if (g_invertir == 0) {
+        cadena_bt_salida += String(g_Roll) + ",";                     // 01 - ANGULO DE INCLINACION FINAL
+        }else{
+          cadena_bt_salida += String(-g_Roll) + ",";                     // 01 - ANGULO DE INCLINACION FINAL
+        }
+    //cadena_bt_salida += String(g_Roll) + ",";                     // 01 - ANGULO DE INCLINACION FINAL
     cadena_bt_salida += String(g_FILTRO * 10000) + ",";           // 02 - FILTRO COMPLEMENTARIO
     cadena_bt_salida += String(g_ang_limite) + ",";               // 03 - ANGULO LIMITE PARA EL DISPARO DE SALIDAS
     cadena_bt_salida += String(g_CICLOS_ACT) + ",";               // 04 - HISTERESIS PARA LA ACTIVACION (CICLOS * DELAY)
