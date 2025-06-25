@@ -254,6 +254,7 @@ int Decodifico(String msg) {
     if (xSemaphoreTake(xMutex_MPU_Data, portMAX_DELAY) == pdTRUE) {
       g_modo = MODO_AUTOMATICO;
       
+      config_save_profile(); // Guardar los nuevos parámetros en flash
       xSemaphoreGive(xMutex_MPU_Data);
     }
   }
@@ -261,6 +262,7 @@ int Decodifico(String msg) {
     if (xSemaphoreTake(xMutex_MPU_Data, portMAX_DELAY) == pdTRUE) {
       g_modo = MODO_MANUAL;
 
+      config_save_profile(); // Guardar los nuevos parámetros en flash
       xSemaphoreGive(xMutex_MPU_Data);
     }
   }

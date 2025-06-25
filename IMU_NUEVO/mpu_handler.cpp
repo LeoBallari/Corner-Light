@@ -167,6 +167,11 @@ void mpu_calibrate_sensor_internal() {
 }
 
 void mpu_read_and_process_data() {
+
+    if (g_modo == 0){
+        return;
+    }
+
     sensors_event_t a, g, temp_event; 
     mpu.getEvent(&a, &g, &temp_event); 
 
