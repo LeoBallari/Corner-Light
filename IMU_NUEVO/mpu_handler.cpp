@@ -17,7 +17,7 @@ float EMA_LP_filter_val = 0;
 
 // Definir el umbral de aceleración aquí para facilitar su ajuste
 // Este valor puede requerir ajuste experimental (ej. 1.0 a 2.5 m/s^2)
-const float ACCEL_MAGNITUDE_THRESHOLD = 1.5f; 
+float ACCEL_MAGNITUDE_THRESHOLD = 1.5f; 
 
 // Definir el coeficiente de alta confianza en el giroscopio para el filtro complementario
 const float COMP_FILTER_HIGH_GYRO_CONFIDENCE_COEFF = 0.9999f;
@@ -228,6 +228,8 @@ void mpu_read_and_process_data() {
         } else {
             calib_offset_temp_val = 0.0f;
         }
+        
+        ACCEL_MAGNITUDE_THRESHOLD = 1 - (g_EMA_ALPHA * 3 * 1.5f);
 
         // --- INICIO CÁLCULO DE g_Roll CON FILTRO SELECCIONADO Y ADAPTACIÓN ---
         #ifdef USAR_MADGWICK
@@ -334,20 +336,18 @@ void MonitorROLL(float accel_angle_ema_filtered, float gyro_rate_post_deadband, 
         Serial.print(g_Roll, 3); Serial.print("\t");
         Serial.print(accel_angle_ema_filtered, 3); Serial.print("\t");
         Serial.print(is_moving_linearly ? 1 : 0); Serial.print("\t"); 
+        Serial.print(ACCEL_MAGNITUDE_THRESHOLD, 3); Serial.print("\t"); 
+        Serial.print(g_EMA_ALPHA, 3); Serial.print("\t"); 
 
-        Serial.print(accel_magnitude, 3); Serial.print("\t");
-        
         #ifdef USAR_MADGWICK
-            Serial.print("MADG\t");
-            Serial.print(g_MADGWICK_BETA, 4);
-            
+            //Serial.print("MADG\t");
+            Serial.print(g_MADGWICK_BETA, 4);    
         #else
-            Serial.print("COMP\t");
+            //Serial.print("COMP\t");
             Serial.print(g_FILTRO, 4);
-
         #endif
-        Serial.print("\t");
-        
+
+        Serial.print("\t");        
         Serial.print(-20); Serial.print("\t"); 
         Serial.print(20); Serial.println();   
     }
