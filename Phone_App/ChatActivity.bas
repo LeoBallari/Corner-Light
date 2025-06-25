@@ -620,7 +620,8 @@ Private Sub btn_on_off_Click
 	Else
 		mens = "AUTO"
 	End If
-	Log(mens)
+	
+	''Log(mens)
 	
 	Starter.Manager.SendMessage(mens)
 End Sub
