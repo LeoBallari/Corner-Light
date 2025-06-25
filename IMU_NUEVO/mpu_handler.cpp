@@ -199,7 +199,9 @@ void mpu_read_and_process_data() {
         }
 
         local_accel_magnitude = sqrt(g_accelX * g_accelX + g_accelY * g_accelY + g_accelZ * g_accelZ);
-        const float ACCEL_MAGNITUDE_THRESHOLD = 0.5;
+        
+        const float ACCEL_MAGNITUDE_THRESHOLD = (1 - g_EMA_ALPHA) * 7 / 8; //Cambio
+
         if (fabs(local_accel_magnitude - GRAVEDAD) > ACCEL_MAGNITUDE_THRESHOLD) {
             local_is_moving_linearly = true; // ACA es donde digo que tengo movimiento lateral
         }
@@ -282,11 +284,6 @@ void mpu_read_and_process_data() {
                 qDot3 = 0.5f * (q0 * gy - q1 * gz + q3 * gx) - current_madgwick_beta * s2;
                 qDot4 = 0.5f * (q0 * gz + q1 * gy - q2 * gx) - current_madgwick_beta * s3;
 
-                // qDot1 = 0.5f * (-q1 * gx - q2 * gy - q3 * gz) - g_MADGWICK_BETA * s0;
-                // qDot2 = 0.5f * (q0 * gx + q2 * gz - q3 * gy) - g_MADGWICK_BETA * s1;
-                // qDot3 = 0.5f * (q0 * gy - q1 * gz + q3 * gx) - g_MADGWICK_BETA * s2;
-                // qDot4 = 0.5f * (q0 * gz + q1 * gy - q2 * gx) - g_MADGWICK_BETA * s3;
-
                 q0 += qDot1 * (dt_imu / 1000.0f);
                 q1 += qDot2 * (dt_imu / 1000.0f);
                 q2 += qDot3 * (dt_imu / 1000.0f);
@@ -345,7 +342,7 @@ float EMALowPassFilter(float value) {
 void MonitorROLL(float accel_angle_ema_filtered, float gyro_rate_post_deadband, bool is_moving_linearly, float accel_magnitude) {
     // Columnas para el Serial Plotter:
     // 1. g_Roll (Ángulo Final)
-    // 2. accel_angle_ema_filtered 
+    /// 2. accel_angle_ema_filtered 
     //// 3. gyro_rate_post_deadband
     //// 4. is_moving_linearly
     // 5. accel_magnitude
@@ -355,9 +352,10 @@ void MonitorROLL(float accel_angle_ema_filtered, float gyro_rate_post_deadband, 
     // 9. Límite Superior (20)
 
     Serial.print(g_Roll, 3); Serial.print("\t");
-    Serial.print(accel_angle_ema_filtered, 3); Serial.print("\t");
+    //Serial.print(accel_angle_ema_filtered, 3); Serial.print("\t");
     //Serial.print(gyro_rate_post_deadband, 3); Serial.print("\t");
     //Serial.print(is_moving_linearly ? 1 : 0); Serial.print("\t");
+    Serial.print(g_invertir); Serial.print("\t");
     Serial.print(accel_magnitude, 3); Serial.print("\t");
     
     #ifdef USAR_MADGWICK

@@ -76,11 +76,11 @@ Sub LogMessage(Msg As String)
 			eje 		= cadena2(6)
 			
 			If eje = 2 Then
-				accY 		= cadena2(13) * -100
-				accX 		= cadena2(14) * -100
+				accY 	= cadena2(13) * -100
+				accX 	= cadena2(14) * -100
 			Else
-				accY 		= cadena2(14) * -100
-				accX 		= cadena2(13) * -100
+				accY	= cadena2(14) * -100
+				accX	= cadena2(13) * -100
 			End If
 			
 			ln_xgyro.Text = Round2(131 / cadena2(17),2)
