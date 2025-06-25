@@ -19,6 +19,7 @@ extern long tiempo_prev_imu;    // ¡CORREGIDO! Solo 'extern' aquí
 extern long dt_imu;             // ¡CORREGIDO! Solo 'extern' aquí
 
 // Prototipos de funciones
+float mapearValorConMap(float entrada);
 bool mpu_init_sensor();
 void mpu_calibrate_sensor_wrapper();  // Función de calibración llamada desde fuera de la tarea
 void mpu_calibrate_sensor_internal(); // Función interna de calibración (sin mutex)

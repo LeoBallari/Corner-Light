@@ -229,7 +229,9 @@ void mpu_read_and_process_data() {
             calib_offset_temp_val = 0.0f;
         }
         
-        ACCEL_MAGNITUDE_THRESHOLD = 1 - (g_EMA_ALPHA * 3 * 1.5f);
+        //ACCEL_MAGNITUDE_THRESHOLD = 1 - (g_EMA_ALPHA * 3 * 1.5f);
+        ACCEL_MAGNITUDE_THRESHOLD = mapearValorConMap(g_EMA_ALPHA);
+
 
         // --- INICIO CÁLCULO DE g_Roll CON FILTRO SELECCIONADO Y ADAPTACIÓN ---
         #ifdef USAR_MADGWICK
@@ -336,6 +338,7 @@ void MonitorROLL(float accel_angle_ema_filtered, float gyro_rate_post_deadband, 
         Serial.print(g_Roll, 3); Serial.print("\t");
         Serial.print(accel_angle_ema_filtered, 3); Serial.print("\t");
         Serial.print(is_moving_linearly ? 1 : 0); Serial.print("\t"); 
+
         Serial.print(ACCEL_MAGNITUDE_THRESHOLD, 3); Serial.print("\t"); 
         Serial.print(g_EMA_ALPHA, 3); Serial.print("\t"); 
 
@@ -364,4 +367,27 @@ void MonitorRAW(sensors_event_t accel_event, sensors_event_t gyro_event){
         Serial.print(gyro_event.gyro.z - g_gz_offset, 3); Serial.print("\t");
         Serial.println();
     }
+}
+
+// Función alternativa usando la función map() de Arduino (CORREGIDA)
+float mapearValorConMap(float entrada) {
+  // Verificar rango (con un pequeño margen de tolerancia para errores de float)
+  if (entrada < 0.019 || entrada > 0.201) {
+    Serial.print("Valor fuera de rango: ");
+    Serial.println(entrada, 6);
+    return -1;
+  }
+  
+  // Convertir a enteros para usar map() - usar más precisión
+  long entradaLong = (long)(entrada * 100000);  // Multiplicar por 100000
+  long minEntrada = 2000;      // 0.02 * 100000
+  long maxEntrada = 20000;     // 0.2 * 100000
+  long minSalida = 50000;      // 0.5 * 100000
+  long maxSalida = 150000;     // 1.5 * 100000
+  
+  long resultadoLong = map(entradaLong, minEntrada, maxEntrada, minSalida, maxSalida);
+  
+  float resultado = resultadoLong / 100000.0;
+  
+  return resultado;
 }
