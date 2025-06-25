@@ -49,8 +49,8 @@ void mpu_task_core0(void *pvParameters) {
         if (needs_calibration) {
             mpu_calibrate_sensor_internal(); // Llamar a calibración fuera del mutex para no bloquear otras tareas
         }
-
-        mpu_read_and_process_data(); // Leer y procesar datos del MPU
+        
+        mpu_read_and_process_data(); // Leer y procesar datos del MPU 
 
         // Lógica de control de relés basada en g_Roll y g_modo
         if (xSemaphoreTake(xMutex_MPU_Data, portMAX_DELAY) == pdTRUE) {
@@ -382,8 +382,8 @@ float mapearValorConMap(float entrada) {
   long entradaLong = (long)(entrada * 100000);  // Multiplicar por 100000
   long minEntrada = 2000;      // 0.02 * 100000
   long maxEntrada = 20000;     // 0.2 * 100000
-  long minSalida = 50000;      // 0.5 * 100000
-  long maxSalida = 150000;     // 1.5 * 100000
+  long minSalida = 150000;     // 1 * 100000
+  long maxSalida = 200000;     // 2 * 100000
   
   long resultadoLong = map(entradaLong, minEntrada, maxEntrada, minSalida, maxSalida);
   

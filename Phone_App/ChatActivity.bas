@@ -170,13 +170,13 @@ Sub Activity_Resume
 	Try
 		If Main.Simulador=False Then
 			Timer2.Enabled=False
-			Log("Timer2 APAGADO")
+			'Log("Timer2 APAGADO")
 			ps.StopListening
 			'ps1.StopListening
 		Else
 			Timer2.Initialize("timer2",20)
 			Timer2.Enabled=True
-			Log("Timer2 ENCENDIDO")
+			''Log("Timer2 ENCENDIDO")
 		
 			ps.StartListening("Orientacion")
 			'ps1.StartListening("Orientacion1")

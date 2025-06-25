@@ -486,7 +486,7 @@ _cadena = "CALIB";
  //BA.debugLineNum = 149;BA.debugLine="Starter.Manager.SendMessage(cadena)";
 mostCurrent._starter._manager /*Corner.Light.Bluetooth.bluetoothmanager*/ ._sendmessage /*String*/ (_cadena);
  //BA.debugLineNum = 150;BA.debugLine="Log(cadena)";
-anywheresoftware.b4a.keywords.Common.LogImpl("36357001",_cadena,0);
+anywheresoftware.b4a.keywords.Common.LogImpl("330146569",_cadena,0);
  //BA.debugLineNum = 151;BA.debugLine="ToastMessageShow(\"Enviando Datos y Guardandolos..";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("Enviando Datos y Guardandolos...."),anywheresoftware.b4a.keywords.Common.False);
  //BA.debugLineNum = 152;BA.debugLine="End Sub";
@@ -544,14 +544,14 @@ mostCurrent._lb_yaw.setText(BA.ObjectToCharSequence(mostCurrent._cadena2[(int) (
 _eje = (int)(Double.parseDouble(mostCurrent._cadena2[(int) (6)]));
  //BA.debugLineNum = 72;BA.debugLine="If eje = 2 Then";
 if (_eje==2) { 
- //BA.debugLineNum = 73;BA.debugLine="accY 		= cadena2(13) * -100";
+ //BA.debugLineNum = 73;BA.debugLine="accY 	= cadena2(13) * -100";
 _accy = (int) ((double)(Double.parseDouble(mostCurrent._cadena2[(int) (13)]))*-100);
- //BA.debugLineNum = 74;BA.debugLine="accX 		= cadena2(14) * -100";
+ //BA.debugLineNum = 74;BA.debugLine="accX 	= cadena2(14) * -100";
 _accx = (int) ((double)(Double.parseDouble(mostCurrent._cadena2[(int) (14)]))*-100);
  }else {
- //BA.debugLineNum = 76;BA.debugLine="accY 		= cadena2(14) * -100";
+ //BA.debugLineNum = 76;BA.debugLine="accY	= cadena2(14) * -100";
 _accy = (int) ((double)(Double.parseDouble(mostCurrent._cadena2[(int) (14)]))*-100);
- //BA.debugLineNum = 77;BA.debugLine="accX 		= cadena2(13) * -100";
+ //BA.debugLineNum = 77;BA.debugLine="accX	= cadena2(13) * -100";
 _accx = (int) ((double)(Double.parseDouble(mostCurrent._cadena2[(int) (13)]))*-100);
  };
  //BA.debugLineNum = 80;BA.debugLine="ln_xgyro.Text = Round2(131 / cadena2(17),2)";
@@ -617,7 +617,7 @@ if (true) return "";
  } 
        catch (Exception e53) {
 			processBA.setLastException(e53); //BA.debugLineNum = 118;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("36225982",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("330015550",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 121;BA.debugLine="End Sub";
 return "";

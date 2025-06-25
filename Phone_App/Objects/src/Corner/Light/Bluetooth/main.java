@@ -960,7 +960,7 @@ _res = anywheresoftware.b4a.keywords.Common.InputList(_l,BA.ObjectToCharSequence
  //BA.debugLineNum = 65;BA.debugLine="If res <> DialogResponse.CANCEL Then";
 if (_res!=anywheresoftware.b4a.keywords.Common.DialogResponse.CANCEL) { 
  //BA.debugLineNum = 66;BA.debugLine="Log(PairedDevices.Get(l.get(res)))";
-anywheresoftware.b4a.keywords.Common.LogImpl("3196620",BA.ObjectToString(_paireddevices.Get(_l.Get(_res))),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("326083340",BA.ObjectToString(_paireddevices.Get(_l.Get(_res))),0);
  //BA.debugLineNum = 68;BA.debugLine="Dim device As NameAndMac";
 _device = new Corner.Light.Bluetooth.bluetoothmanager._nameandmac();
  //BA.debugLineNum = 69;BA.debugLine="device.Name = \"Corner Light\"";

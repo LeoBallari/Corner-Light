@@ -39,8 +39,13 @@ void setup() {
     while(1);
   }
 
+  // g_modo = MODO_AUTOMATICO;
+  // config_save_profile();
+
   config_load_profile(); // Cargar el perfil de configuración inicial
   config_print_all(); // Imprimir configuración cargada (para depuración)
+
+
 
   // 3. Inicializar los pines de los relés
   relays_init();

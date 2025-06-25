@@ -150,8 +150,10 @@ private Sub EnviarDatos (Calib As Boolean, Perfil As Int)
 	
 	If tb_modo.Checked=True Then
 		cadena = cadena & ",1"
+		Log("AUTOMATICO")
 	Else
 		cadena = cadena & ",0"
+		Log("MANUAL")
 	End If
 	
 	If tb_invertir_yaw.Checked=True Then

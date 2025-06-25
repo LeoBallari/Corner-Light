@@ -513,13 +513,13 @@ return;
 case 0:
 //C
 this.state = 1;
- //BA.debugLineNum = 328;BA.debugLine="Dim mens As String";
+ //BA.debugLineNum = 330;BA.debugLine="Dim mens As String";
 _mens = "";
- //BA.debugLineNum = 329;BA.debugLine="mens = \"Esta por CALIBRAR el dispositivo. \"";
+ //BA.debugLineNum = 331;BA.debugLine="mens = \"Esta por CALIBRAR el dispositivo. \"";
 _mens = "Esta por CALIBRAR el dispositivo. ";
- //BA.debugLineNum = 331;BA.debugLine="Msgbox2Async(mens, \"Corner Light\", \"Sí\", \"\", \"No\"";
+ //BA.debugLineNum = 333;BA.debugLine="Msgbox2Async(mens, \"Corner Light\", \"Sí\", \"\", \"No\"";
 anywheresoftware.b4a.keywords.Common.Msgbox2Async(BA.ObjectToCharSequence(_mens),BA.ObjectToCharSequence("Corner Light"),"Sí","","No",(anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper(), (android.graphics.Bitmap)(anywheresoftware.b4a.keywords.Common.Null)),processBA,anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 333;BA.debugLine="Wait For Msgbox_Result (Result As Int)";
+ //BA.debugLineNum = 335;BA.debugLine="Wait For Msgbox_Result (Result As Int)";
 anywheresoftware.b4a.keywords.Common.WaitFor("msgbox_result", processBA, this, null);
 this.state = 5;
 return;
@@ -528,7 +528,7 @@ case 5:
 this.state = 1;
 _result = (Integer) result[0];
 ;
- //BA.debugLineNum = 335;BA.debugLine="If Result = DialogResponse.POSITIVE Then";
+ //BA.debugLineNum = 337;BA.debugLine="If Result = DialogResponse.POSITIVE Then";
 if (true) break;
 
 case 1:
@@ -541,11 +541,11 @@ this.state = 3;
 case 3:
 //C
 this.state = 4;
- //BA.debugLineNum = 336;BA.debugLine="ProgressDialogShow2(\"Calibrando....\",False)";
+ //BA.debugLineNum = 338;BA.debugLine="ProgressDialogShow2(\"Calibrando....\",False)";
 anywheresoftware.b4a.keywords.Common.ProgressDialogShow2(mostCurrent.activityBA,BA.ObjectToCharSequence("Calibrando...."),anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 338;BA.debugLine="EnviarDatos(True,ChatActivity.perfil_usuario)";
+ //BA.debugLineNum = 340;BA.debugLine="EnviarDatos(True,ChatActivity.perfil_usuario)";
 _enviardatos(anywheresoftware.b4a.keywords.Common.True,parent.mostCurrent._chatactivity._perfil_usuario /*int*/ );
- //BA.debugLineNum = 339;BA.debugLine="Sleep((1000 * see_imu.Value))";
+ //BA.debugLineNum = 341;BA.debugLine="Sleep((1000 * see_imu.Value))";
 anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,this,(int) ((1000*parent.mostCurrent._see_imu.getValue())));
 this.state = 6;
 return;
@@ -553,11 +553,11 @@ case 6:
 //C
 this.state = 4;
 ;
- //BA.debugLineNum = 340;BA.debugLine="ProgressDialogHide";
+ //BA.debugLineNum = 342;BA.debugLine="ProgressDialogHide";
 anywheresoftware.b4a.keywords.Common.ProgressDialogHide();
- //BA.debugLineNum = 342;BA.debugLine="Activity.Finish";
+ //BA.debugLineNum = 344;BA.debugLine="Activity.Finish";
 parent.mostCurrent._activity.Finish();
- //BA.debugLineNum = 343;BA.debugLine="StartActivity(ChatActivity)";
+ //BA.debugLineNum = 345;BA.debugLine="StartActivity(ChatActivity)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(parent.mostCurrent._chatactivity.getObject()));
  if (true) break;
 
@@ -565,7 +565,7 @@ case 4:
 //C
 this.state = -1;
 ;
- //BA.debugLineNum = 345;BA.debugLine="End Sub";
+ //BA.debugLineNum = 347;BA.debugLine="End Sub";
 if (true) break;
 
             }
@@ -575,14 +575,14 @@ if (true) break;
 public static void  _msgbox_result(int _result) throws Exception{
 }
 public static String  _btn_guardarcambios_longclick() throws Exception{
- //BA.debugLineNum = 360;BA.debugLine="Private Sub btn_GuardarCambios_LongClick";
- //BA.debugLineNum = 362;BA.debugLine="EnviarDatos(False,ChatActivity.perfil_usuario)";
+ //BA.debugLineNum = 362;BA.debugLine="Private Sub btn_GuardarCambios_LongClick";
+ //BA.debugLineNum = 364;BA.debugLine="EnviarDatos(False,ChatActivity.perfil_usuario)";
 _enviardatos(anywheresoftware.b4a.keywords.Common.False,mostCurrent._chatactivity._perfil_usuario /*int*/ );
- //BA.debugLineNum = 363;BA.debugLine="Activity.Finish";
+ //BA.debugLineNum = 365;BA.debugLine="Activity.Finish";
 mostCurrent._activity.Finish();
- //BA.debugLineNum = 364;BA.debugLine="StartActivity(ChatActivity)";
+ //BA.debugLineNum = 366;BA.debugLine="StartActivity(ChatActivity)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._chatactivity.getObject()));
- //BA.debugLineNum = 365;BA.debugLine="End Sub";
+ //BA.debugLineNum = 367;BA.debugLine="End Sub";
 return "";
 }
 public static String  _enviardatos(boolean _calib,int _perfil) throws Exception{
@@ -627,44 +627,48 @@ _cadena = _cadena+",0";
 if (mostCurrent._tb_modo.getChecked()==anywheresoftware.b4a.keywords.Common.True) { 
  //BA.debugLineNum = 146;BA.debugLine="cadena = cadena & \",1\"";
 _cadena = _cadena+",1";
+ //BA.debugLineNum = 147;BA.debugLine="Log(\"AUTOMATICO\")";
+anywheresoftware.b4a.keywords.Common.LogImpl("327721759","AUTOMATICO",0);
  }else {
- //BA.debugLineNum = 148;BA.debugLine="cadena = cadena & \",0\"";
+ //BA.debugLineNum = 149;BA.debugLine="cadena = cadena & \",0\"";
 _cadena = _cadena+",0";
+ //BA.debugLineNum = 150;BA.debugLine="Log(\"MANUAL\")";
+anywheresoftware.b4a.keywords.Common.LogImpl("327721762","MANUAL",0);
  };
- //BA.debugLineNum = 151;BA.debugLine="If tb_invertir_yaw.Checked=True Then";
+ //BA.debugLineNum = 153;BA.debugLine="If tb_invertir_yaw.Checked=True Then";
 if (mostCurrent._tb_invertir_yaw.getChecked()==anywheresoftware.b4a.keywords.Common.True) { 
- //BA.debugLineNum = 152;BA.debugLine="cadena = cadena & \",1\"";
+ //BA.debugLineNum = 154;BA.debugLine="cadena = cadena & \",1\"";
 _cadena = _cadena+",1";
  }else {
- //BA.debugLineNum = 154;BA.debugLine="cadena = cadena & \",0\"";
+ //BA.debugLineNum = 156;BA.debugLine="cadena = cadena & \",0\"";
 _cadena = _cadena+",0";
  };
- //BA.debugLineNum = 157;BA.debugLine="cadena = cadena & \",\" & ImuDelay";
+ //BA.debugLineNum = 159;BA.debugLine="cadena = cadena & \",\" & ImuDelay";
 _cadena = _cadena+","+BA.NumberToString(_imudelay);
- //BA.debugLineNum = 158;BA.debugLine="cadena = cadena & \",\" & (pasa_bajos/50)";
+ //BA.debugLineNum = 160;BA.debugLine="cadena = cadena & \",\" & (pasa_bajos/50)";
 _cadena = _cadena+","+BA.NumberToString((_pasa_bajos/(double)50));
- //BA.debugLineNum = 159;BA.debugLine="cadena = cadena & \",\" & (yaw)";
+ //BA.debugLineNum = 161;BA.debugLine="cadena = cadena & \",\" & (yaw)";
 _cadena = _cadena+","+BA.NumberToString((_yaw));
- //BA.debugLineNum = 160;BA.debugLine="cadena = cadena & \",\" & (gyro_esc)";
+ //BA.debugLineNum = 162;BA.debugLine="cadena = cadena & \",\" & (gyro_esc)";
 _cadena = _cadena+","+BA.NumberToString((_gyro_esc));
- //BA.debugLineNum = 161;BA.debugLine="cadena = cadena & \",\" & (lb_ang_apagado.Text)";
+ //BA.debugLineNum = 163;BA.debugLine="cadena = cadena & \",\" & (lb_ang_apagado.Text)";
 _cadena = _cadena+","+(mostCurrent._lb_ang_apagado.getText());
- //BA.debugLineNum = 162;BA.debugLine="cadena = cadena & \",\" & Perfil";
+ //BA.debugLineNum = 164;BA.debugLine="cadena = cadena & \",\" & Perfil";
 _cadena = _cadena+","+BA.NumberToString(_perfil);
- //BA.debugLineNum = 163;BA.debugLine="cadena = cadena & \",\" & txt_nombreBT.Text";
+ //BA.debugLineNum = 165;BA.debugLine="cadena = cadena & \",\" & txt_nombreBT.Text";
 _cadena = _cadena+","+mostCurrent._txt_nombrebt.getText();
- //BA.debugLineNum = 165;BA.debugLine="If Calib = True Then";
+ //BA.debugLineNum = 167;BA.debugLine="If Calib = True Then";
 if (_calib==anywheresoftware.b4a.keywords.Common.True) { 
- //BA.debugLineNum = 166;BA.debugLine="cadena = \"CALIB\"";
+ //BA.debugLineNum = 168;BA.debugLine="cadena = \"CALIB\"";
 _cadena = "CALIB";
  };
- //BA.debugLineNum = 169;BA.debugLine="Starter.Manager.SendMessage(cadena)";
+ //BA.debugLineNum = 171;BA.debugLine="Starter.Manager.SendMessage(cadena)";
 mostCurrent._starter._manager /*Corner.Light.Bluetooth.bluetoothmanager*/ ._sendmessage /*String*/ (_cadena);
- //BA.debugLineNum = 170;BA.debugLine="Log(cadena)";
-anywheresoftware.b4a.keywords.Common.LogImpl("33932214",_cadena,0);
- //BA.debugLineNum = 171;BA.debugLine="ToastMessageShow(\"Enviando Datos y Guardandolos..";
+ //BA.debugLineNum = 172;BA.debugLine="Log(cadena)";
+anywheresoftware.b4a.keywords.Common.LogImpl("327721784",_cadena,0);
+ //BA.debugLineNum = 173;BA.debugLine="ToastMessageShow(\"Enviando Datos y Guardandolos..";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("Enviando Datos y Guardandolos...."),anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 172;BA.debugLine="End Sub";
+ //BA.debugLineNum = 174;BA.debugLine="End Sub";
 return "";
 }
 public static String  _globals() throws Exception{
@@ -717,12 +721,12 @@ mostCurrent._txt_nombrebt = new anywheresoftware.b4a.objects.EditTextWrapper();
 return "";
 }
 public static String  _mnudiagnostico_click() throws Exception{
- //BA.debugLineNum = 174;BA.debugLine="Private Sub mnuDiagnostico_Click()";
- //BA.debugLineNum = 175;BA.debugLine="Activity.Finish";
+ //BA.debugLineNum = 176;BA.debugLine="Private Sub mnuDiagnostico_Click()";
+ //BA.debugLineNum = 177;BA.debugLine="Activity.Finish";
 mostCurrent._activity.Finish();
- //BA.debugLineNum = 176;BA.debugLine="StartActivity(DiagnosticoActivity)";
+ //BA.debugLineNum = 178;BA.debugLine="StartActivity(DiagnosticoActivity)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._diagnosticoactivity.getObject()));
- //BA.debugLineNum = 177;BA.debugLine="End Sub";
+ //BA.debugLineNum = 179;BA.debugLine="End Sub";
 return "";
 }
 public static void  _mnuguardarperfil_click() throws Exception{
@@ -751,25 +755,25 @@ return;
 case 0:
 //C
 this.state = 1;
- //BA.debugLineNum = 240;BA.debugLine="Dim rm1 As RandomAccessFile";
+ //BA.debugLineNum = 242;BA.debugLine="Dim rm1 As RandomAccessFile";
 _rm1 = new anywheresoftware.b4a.randomaccessfile.RandomAccessFile();
- //BA.debugLineNum = 241;BA.debugLine="Dim rm2 As RandomAccessFile";
+ //BA.debugLineNum = 243;BA.debugLine="Dim rm2 As RandomAccessFile";
 _rm2 = new anywheresoftware.b4a.randomaccessfile.RandomAccessFile();
- //BA.debugLineNum = 242;BA.debugLine="Dim perfil1 As Perfil_Ruta";
+ //BA.debugLineNum = 244;BA.debugLine="Dim perfil1 As Perfil_Ruta";
 _perfil1 = new Corner.Light.Bluetooth.configactivity._perfil_ruta();
- //BA.debugLineNum = 243;BA.debugLine="Dim perfil2 As Perfil_Urbano";
+ //BA.debugLineNum = 245;BA.debugLine="Dim perfil2 As Perfil_Urbano";
 _perfil2 = new Corner.Light.Bluetooth.configactivity._perfil_urbano();
- //BA.debugLineNum = 245;BA.debugLine="perfil1.Initialize";
+ //BA.debugLineNum = 247;BA.debugLine="perfil1.Initialize";
 _perfil1.Initialize();
- //BA.debugLineNum = 246;BA.debugLine="perfil2.Initialize";
+ //BA.debugLineNum = 248;BA.debugLine="perfil2.Initialize";
 _perfil2.Initialize();
- //BA.debugLineNum = 248;BA.debugLine="rm1.Initialize(File.DirInternal,\"perfilRuta.conf\"";
+ //BA.debugLineNum = 250;BA.debugLine="rm1.Initialize(File.DirInternal,\"perfilRuta.conf\"";
 _rm1.Initialize(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"perfilRuta.conf",anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 249;BA.debugLine="rm2.Initialize(File.DirInternal,\"perfilUrbano.con";
+ //BA.debugLineNum = 251;BA.debugLine="rm2.Initialize(File.DirInternal,\"perfilUrbano.con";
 _rm2.Initialize(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"perfilUrbano.conf",anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 251;BA.debugLine="Msgbox2Async(\"Elija PERFIL....\", \"Corner Light\",";
+ //BA.debugLineNum = 253;BA.debugLine="Msgbox2Async(\"Elija PERFIL....\", \"Corner Light\",";
 anywheresoftware.b4a.keywords.Common.Msgbox2Async(BA.ObjectToCharSequence("Elija PERFIL...."),BA.ObjectToCharSequence("Corner Light"),"URBANO","CACENLAR","RUTA",(anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper(), (android.graphics.Bitmap)(anywheresoftware.b4a.keywords.Common.Null)),processBA,anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 252;BA.debugLine="Wait For Msgbox_Result (Result As Int)";
+ //BA.debugLineNum = 254;BA.debugLine="Wait For Msgbox_Result (Result As Int)";
 anywheresoftware.b4a.keywords.Common.WaitFor("msgbox_result", processBA, this, null);
 this.state = 9;
 return;
@@ -778,7 +782,7 @@ case 9:
 this.state = 1;
 _result = (Integer) result[0];
 ;
- //BA.debugLineNum = 253;BA.debugLine="If Result = DialogResponse.POSITIVE Then";
+ //BA.debugLineNum = 255;BA.debugLine="If Result = DialogResponse.POSITIVE Then";
 if (true) break;
 
 case 1:
@@ -795,61 +799,61 @@ this.state = 7;
 case 3:
 //C
 this.state = 8;
- //BA.debugLineNum = 255;BA.debugLine="perfil2.Valores(0) 	= see_sencibilidad.Value";
+ //BA.debugLineNum = 257;BA.debugLine="perfil2.Valores(0) 	= see_sencibilidad.Value";
 _perfil2.Valores /*int[]*/ [(int) (0)] = parent.mostCurrent._see_sencibilidad.getValue();
- //BA.debugLineNum = 256;BA.debugLine="perfil2.Valores(1) 	= see_pasa_bajos.Value";
+ //BA.debugLineNum = 258;BA.debugLine="perfil2.Valores(1) 	= see_pasa_bajos.Value";
 _perfil2.Valores /*int[]*/ [(int) (1)] = parent.mostCurrent._see_pasa_bajos.getValue();
- //BA.debugLineNum = 257;BA.debugLine="perfil2.Valores(2) 	= see_angulo.Value";
+ //BA.debugLineNum = 259;BA.debugLine="perfil2.Valores(2) 	= see_angulo.Value";
 _perfil2.Valores /*int[]*/ [(int) (2)] = parent.mostCurrent._see_angulo.getValue();
- //BA.debugLineNum = 258;BA.debugLine="perfil2.Valores(3) 	= see_angulo2.Value";
+ //BA.debugLineNum = 260;BA.debugLine="perfil2.Valores(3) 	= see_angulo2.Value";
 _perfil2.Valores /*int[]*/ [(int) (3)] = parent.mostCurrent._see_angulo2.getValue();
- //BA.debugLineNum = 259;BA.debugLine="perfil2.Valores(4) 	= see_imu.Value";
+ //BA.debugLineNum = 261;BA.debugLine="perfil2.Valores(4) 	= see_imu.Value";
 _perfil2.Valores /*int[]*/ [(int) (4)] = parent.mostCurrent._see_imu.getValue();
- //BA.debugLineNum = 260;BA.debugLine="perfil2.Valores(5) 	= see_yaw.Value";
+ //BA.debugLineNum = 262;BA.debugLine="perfil2.Valores(5) 	= see_yaw.Value";
 _perfil2.Valores /*int[]*/ [(int) (5)] = parent.mostCurrent._see_yaw.getValue();
- //BA.debugLineNum = 261;BA.debugLine="perfil2.Valores(6) 	= see_gyro_escala.Value";
+ //BA.debugLineNum = 263;BA.debugLine="perfil2.Valores(6) 	= see_gyro_escala.Value";
 _perfil2.Valores /*int[]*/ [(int) (6)] = parent.mostCurrent._see_gyro_escala.getValue();
- //BA.debugLineNum = 263;BA.debugLine="ChatActivity.perfil_usuario	= 1";
+ //BA.debugLineNum = 265;BA.debugLine="ChatActivity.perfil_usuario	= 1";
 parent.mostCurrent._chatactivity._perfil_usuario /*int*/  = (int) (1);
- //BA.debugLineNum = 264;BA.debugLine="ChatActivity.Perfil 		= \"URBANO\"";
+ //BA.debugLineNum = 266;BA.debugLine="ChatActivity.Perfil 		= \"URBANO\"";
 parent.mostCurrent._chatactivity._perfil /*String*/  = "URBANO";
- //BA.debugLineNum = 266;BA.debugLine="rm2.WriteEncryptedObject(perfil2,\"123\",0)";
+ //BA.debugLineNum = 268;BA.debugLine="rm2.WriteEncryptedObject(perfil2,\"123\",0)";
 _rm2.WriteEncryptedObject((Object)(_perfil2),"123",(long) (0));
- //BA.debugLineNum = 268;BA.debugLine="ToastMessageShow(\"Perfil URBANO guardado correct";
+ //BA.debugLineNum = 270;BA.debugLine="ToastMessageShow(\"Perfil URBANO guardado correct";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("Perfil URBANO guardado correctamente...."),anywheresoftware.b4a.keywords.Common.True);
  if (true) break;
 
 case 5:
 //C
 this.state = 8;
- //BA.debugLineNum = 270;BA.debugLine="Return";
+ //BA.debugLineNum = 272;BA.debugLine="Return";
 if (true) return ;
  if (true) break;
 
 case 7:
 //C
 this.state = 8;
- //BA.debugLineNum = 273;BA.debugLine="perfil1.Valores(0)  = see_sencibilidad.Value";
+ //BA.debugLineNum = 275;BA.debugLine="perfil1.Valores(0)  = see_sencibilidad.Value";
 _perfil1.Valores /*int[]*/ [(int) (0)] = parent.mostCurrent._see_sencibilidad.getValue();
- //BA.debugLineNum = 274;BA.debugLine="perfil1.Valores(1)  = see_pasa_bajos.Value";
+ //BA.debugLineNum = 276;BA.debugLine="perfil1.Valores(1)  = see_pasa_bajos.Value";
 _perfil1.Valores /*int[]*/ [(int) (1)] = parent.mostCurrent._see_pasa_bajos.getValue();
- //BA.debugLineNum = 275;BA.debugLine="perfil1.Valores(2)  = see_angulo.Value";
+ //BA.debugLineNum = 277;BA.debugLine="perfil1.Valores(2)  = see_angulo.Value";
 _perfil1.Valores /*int[]*/ [(int) (2)] = parent.mostCurrent._see_angulo.getValue();
- //BA.debugLineNum = 276;BA.debugLine="perfil1.Valores(3)  = see_angulo2.Value";
+ //BA.debugLineNum = 278;BA.debugLine="perfil1.Valores(3)  = see_angulo2.Value";
 _perfil1.Valores /*int[]*/ [(int) (3)] = parent.mostCurrent._see_angulo2.getValue();
- //BA.debugLineNum = 277;BA.debugLine="perfil1.Valores(4)  = see_imu.Value";
+ //BA.debugLineNum = 279;BA.debugLine="perfil1.Valores(4)  = see_imu.Value";
 _perfil1.Valores /*int[]*/ [(int) (4)] = parent.mostCurrent._see_imu.getValue();
- //BA.debugLineNum = 278;BA.debugLine="perfil1.Valores(5)  = see_yaw.Value";
+ //BA.debugLineNum = 280;BA.debugLine="perfil1.Valores(5)  = see_yaw.Value";
 _perfil1.Valores /*int[]*/ [(int) (5)] = parent.mostCurrent._see_yaw.getValue();
- //BA.debugLineNum = 279;BA.debugLine="perfil1.Valores(6)  = see_gyro_escala.Value";
+ //BA.debugLineNum = 281;BA.debugLine="perfil1.Valores(6)  = see_gyro_escala.Value";
 _perfil1.Valores /*int[]*/ [(int) (6)] = parent.mostCurrent._see_gyro_escala.getValue();
- //BA.debugLineNum = 281;BA.debugLine="ChatActivity.perfil_usuario	= 2";
+ //BA.debugLineNum = 283;BA.debugLine="ChatActivity.perfil_usuario	= 2";
 parent.mostCurrent._chatactivity._perfil_usuario /*int*/  = (int) (2);
- //BA.debugLineNum = 282;BA.debugLine="ChatActivity.Perfil 		= \"RUTA\"";
+ //BA.debugLineNum = 284;BA.debugLine="ChatActivity.Perfil 		= \"RUTA\"";
 parent.mostCurrent._chatactivity._perfil /*String*/  = "RUTA";
- //BA.debugLineNum = 284;BA.debugLine="rm1.WriteEncryptedObject(perfil1,\"123\",0)";
+ //BA.debugLineNum = 286;BA.debugLine="rm1.WriteEncryptedObject(perfil1,\"123\",0)";
 _rm1.WriteEncryptedObject((Object)(_perfil1),"123",(long) (0));
- //BA.debugLineNum = 286;BA.debugLine="ToastMessageShow(\"Perfil RUTA guardado correctam";
+ //BA.debugLineNum = 288;BA.debugLine="ToastMessageShow(\"Perfil RUTA guardado correctam";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("Perfil RUTA guardado correctamente...."),anywheresoftware.b4a.keywords.Common.True);
  if (true) break;
 
@@ -857,17 +861,17 @@ case 8:
 //C
 this.state = -1;
 ;
- //BA.debugLineNum = 288;BA.debugLine="rm1.Close";
+ //BA.debugLineNum = 290;BA.debugLine="rm1.Close";
 _rm1.Close();
- //BA.debugLineNum = 289;BA.debugLine="rm2.Close";
+ //BA.debugLineNum = 291;BA.debugLine="rm2.Close";
 _rm2.Close();
- //BA.debugLineNum = 291;BA.debugLine="EnviarDatos(False,ChatActivity.perfil_usuario)";
+ //BA.debugLineNum = 293;BA.debugLine="EnviarDatos(False,ChatActivity.perfil_usuario)";
 _enviardatos(anywheresoftware.b4a.keywords.Common.False,parent.mostCurrent._chatactivity._perfil_usuario /*int*/ );
- //BA.debugLineNum = 293;BA.debugLine="Activity.Finish";
+ //BA.debugLineNum = 295;BA.debugLine="Activity.Finish";
 parent.mostCurrent._activity.Finish();
- //BA.debugLineNum = 294;BA.debugLine="StartActivity(ChatActivity)";
+ //BA.debugLineNum = 296;BA.debugLine="StartActivity(ChatActivity)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(parent.mostCurrent._chatactivity.getObject()));
- //BA.debugLineNum = 295;BA.debugLine="End Sub";
+ //BA.debugLineNum = 297;BA.debugLine="End Sub";
 if (true) break;
 
             }
@@ -900,9 +904,9 @@ return;
 case 0:
 //C
 this.state = 1;
- //BA.debugLineNum = 180;BA.debugLine="Msgbox2Async(\"Elija PERFIL....\", \"Corner Light\",";
+ //BA.debugLineNum = 182;BA.debugLine="Msgbox2Async(\"Elija PERFIL....\", \"Corner Light\",";
 anywheresoftware.b4a.keywords.Common.Msgbox2Async(BA.ObjectToCharSequence("Elija PERFIL...."),BA.ObjectToCharSequence("Corner Light"),"URBANO","CACENLAR","RUTA",(anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper(), (android.graphics.Bitmap)(anywheresoftware.b4a.keywords.Common.Null)),processBA,anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 181;BA.debugLine="Wait For Msgbox_Result (Result As Int)";
+ //BA.debugLineNum = 183;BA.debugLine="Wait For Msgbox_Result (Result As Int)";
 anywheresoftware.b4a.keywords.Common.WaitFor("msgbox_result", processBA, this, null);
 this.state = 13;
 return;
@@ -911,23 +915,23 @@ case 13:
 this.state = 1;
 _result = (Integer) result[0];
 ;
- //BA.debugLineNum = 183;BA.debugLine="Dim rm1 As RandomAccessFile";
+ //BA.debugLineNum = 185;BA.debugLine="Dim rm1 As RandomAccessFile";
 _rm1 = new anywheresoftware.b4a.randomaccessfile.RandomAccessFile();
- //BA.debugLineNum = 184;BA.debugLine="Dim rm2 As RandomAccessFile";
+ //BA.debugLineNum = 186;BA.debugLine="Dim rm2 As RandomAccessFile";
 _rm2 = new anywheresoftware.b4a.randomaccessfile.RandomAccessFile();
- //BA.debugLineNum = 186;BA.debugLine="Dim perfil1 As Perfil_Ruta";
+ //BA.debugLineNum = 188;BA.debugLine="Dim perfil1 As Perfil_Ruta";
 _perfil1 = new Corner.Light.Bluetooth.configactivity._perfil_ruta();
- //BA.debugLineNum = 187;BA.debugLine="Dim perfil2 As Perfil_Urbano";
+ //BA.debugLineNum = 189;BA.debugLine="Dim perfil2 As Perfil_Urbano";
 _perfil2 = new Corner.Light.Bluetooth.configactivity._perfil_urbano();
- //BA.debugLineNum = 189;BA.debugLine="rm1.Initialize(File.DirInternal,\"perfilRuta.conf\"";
+ //BA.debugLineNum = 191;BA.debugLine="rm1.Initialize(File.DirInternal,\"perfilRuta.conf\"";
 _rm1.Initialize(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"perfilRuta.conf",anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 190;BA.debugLine="rm2.Initialize(File.DirInternal,\"perfilUrbano.con";
+ //BA.debugLineNum = 192;BA.debugLine="rm2.Initialize(File.DirInternal,\"perfilUrbano.con";
 _rm2.Initialize(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"perfilUrbano.conf",anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 192;BA.debugLine="perfil1 = rm1.ReadEncryptedObject(\"123\",0)";
+ //BA.debugLineNum = 194;BA.debugLine="perfil1 = rm1.ReadEncryptedObject(\"123\",0)";
 _perfil1 = (Corner.Light.Bluetooth.configactivity._perfil_ruta)(_rm1.ReadEncryptedObject("123",(long) (0)));
- //BA.debugLineNum = 193;BA.debugLine="perfil2 = rm2.ReadEncryptedObject(\"123\",0)";
+ //BA.debugLineNum = 195;BA.debugLine="perfil2 = rm2.ReadEncryptedObject(\"123\",0)";
 _perfil2 = (Corner.Light.Bluetooth.configactivity._perfil_urbano)(_rm2.ReadEncryptedObject("123",(long) (0)));
- //BA.debugLineNum = 195;BA.debugLine="If Result = DialogResponse.POSITIVE Then";
+ //BA.debugLineNum = 197;BA.debugLine="If Result = DialogResponse.POSITIVE Then";
 if (true) break;
 
 case 1:
@@ -944,57 +948,57 @@ this.state = 7;
 case 3:
 //C
 this.state = 8;
- //BA.debugLineNum = 196;BA.debugLine="see_sencibilidad.Value	= perfil2.Valores(0)";
+ //BA.debugLineNum = 198;BA.debugLine="see_sencibilidad.Value	= perfil2.Valores(0)";
 parent.mostCurrent._see_sencibilidad.setValue(_perfil2.Valores /*int[]*/ [(int) (0)]);
- //BA.debugLineNum = 197;BA.debugLine="see_pasa_bajos.Value	= perfil2.Valores(1)";
+ //BA.debugLineNum = 199;BA.debugLine="see_pasa_bajos.Value	= perfil2.Valores(1)";
 parent.mostCurrent._see_pasa_bajos.setValue(_perfil2.Valores /*int[]*/ [(int) (1)]);
- //BA.debugLineNum = 198;BA.debugLine="see_angulo.Value 		= perfil2.Valores(2)";
+ //BA.debugLineNum = 200;BA.debugLine="see_angulo.Value 		= perfil2.Valores(2)";
 parent.mostCurrent._see_angulo.setValue(_perfil2.Valores /*int[]*/ [(int) (2)]);
- //BA.debugLineNum = 199;BA.debugLine="see_angulo2.Value 		= perfil2.Valores(3)";
+ //BA.debugLineNum = 201;BA.debugLine="see_angulo2.Value 		= perfil2.Valores(3)";
 parent.mostCurrent._see_angulo2.setValue(_perfil2.Valores /*int[]*/ [(int) (3)]);
- //BA.debugLineNum = 200;BA.debugLine="see_imu.Value 			= perfil2.Valores(4)";
+ //BA.debugLineNum = 202;BA.debugLine="see_imu.Value 			= perfil2.Valores(4)";
 parent.mostCurrent._see_imu.setValue(_perfil2.Valores /*int[]*/ [(int) (4)]);
- //BA.debugLineNum = 201;BA.debugLine="see_yaw.Value 			= perfil2.Valores(5)";
+ //BA.debugLineNum = 203;BA.debugLine="see_yaw.Value 			= perfil2.Valores(5)";
 parent.mostCurrent._see_yaw.setValue(_perfil2.Valores /*int[]*/ [(int) (5)]);
- //BA.debugLineNum = 202;BA.debugLine="see_gyro_escala.Value 	= perfil2.Valores(6)";
+ //BA.debugLineNum = 204;BA.debugLine="see_gyro_escala.Value 	= perfil2.Valores(6)";
 parent.mostCurrent._see_gyro_escala.setValue(_perfil2.Valores /*int[]*/ [(int) (6)]);
- //BA.debugLineNum = 204;BA.debugLine="ChatActivity.perfil_usuario	= 1";
+ //BA.debugLineNum = 206;BA.debugLine="ChatActivity.perfil_usuario	= 1";
 parent.mostCurrent._chatactivity._perfil_usuario /*int*/  = (int) (1);
- //BA.debugLineNum = 205;BA.debugLine="ChatActivity.Perfil 		= \"URBANO\"";
+ //BA.debugLineNum = 207;BA.debugLine="ChatActivity.Perfil 		= \"URBANO\"";
 parent.mostCurrent._chatactivity._perfil /*String*/  = "URBANO";
- //BA.debugLineNum = 207;BA.debugLine="Log(\"URBANO activo / \" & see_yaw.Value)";
-anywheresoftware.b4a.keywords.Common.LogImpl("34063260","URBANO activo / "+BA.NumberToString(parent.mostCurrent._see_yaw.getValue()),0);
+ //BA.debugLineNum = 209;BA.debugLine="Log(\"URBANO activo / \" & see_yaw.Value)";
+anywheresoftware.b4a.keywords.Common.LogImpl("327852828","URBANO activo / "+BA.NumberToString(parent.mostCurrent._see_yaw.getValue()),0);
  if (true) break;
 
 case 5:
 //C
 this.state = 8;
- //BA.debugLineNum = 209;BA.debugLine="see_sencibilidad.Value 	= perfil1.Valores(0)";
+ //BA.debugLineNum = 211;BA.debugLine="see_sencibilidad.Value 	= perfil1.Valores(0)";
 parent.mostCurrent._see_sencibilidad.setValue(_perfil1.Valores /*int[]*/ [(int) (0)]);
- //BA.debugLineNum = 210;BA.debugLine="see_pasa_bajos.Value	= perfil1.Valores(1)";
+ //BA.debugLineNum = 212;BA.debugLine="see_pasa_bajos.Value	= perfil1.Valores(1)";
 parent.mostCurrent._see_pasa_bajos.setValue(_perfil1.Valores /*int[]*/ [(int) (1)]);
- //BA.debugLineNum = 211;BA.debugLine="see_angulo.Value 		= perfil1.Valores(2)";
+ //BA.debugLineNum = 213;BA.debugLine="see_angulo.Value 		= perfil1.Valores(2)";
 parent.mostCurrent._see_angulo.setValue(_perfil1.Valores /*int[]*/ [(int) (2)]);
- //BA.debugLineNum = 212;BA.debugLine="see_angulo2.Value		= perfil1.Valores(3)";
+ //BA.debugLineNum = 214;BA.debugLine="see_angulo2.Value		= perfil1.Valores(3)";
 parent.mostCurrent._see_angulo2.setValue(_perfil1.Valores /*int[]*/ [(int) (3)]);
- //BA.debugLineNum = 213;BA.debugLine="see_imu.Value 			= perfil1.Valores(4)";
+ //BA.debugLineNum = 215;BA.debugLine="see_imu.Value 			= perfil1.Valores(4)";
 parent.mostCurrent._see_imu.setValue(_perfil1.Valores /*int[]*/ [(int) (4)]);
- //BA.debugLineNum = 214;BA.debugLine="see_yaw.Value 			= perfil1.Valores(5)";
+ //BA.debugLineNum = 216;BA.debugLine="see_yaw.Value 			= perfil1.Valores(5)";
 parent.mostCurrent._see_yaw.setValue(_perfil1.Valores /*int[]*/ [(int) (5)]);
- //BA.debugLineNum = 215;BA.debugLine="see_gyro_escala.Value 	= perfil1.Valores(6)";
+ //BA.debugLineNum = 217;BA.debugLine="see_gyro_escala.Value 	= perfil1.Valores(6)";
 parent.mostCurrent._see_gyro_escala.setValue(_perfil1.Valores /*int[]*/ [(int) (6)]);
- //BA.debugLineNum = 217;BA.debugLine="ChatActivity.perfil_usuario	= 2";
+ //BA.debugLineNum = 219;BA.debugLine="ChatActivity.perfil_usuario	= 2";
 parent.mostCurrent._chatactivity._perfil_usuario /*int*/  = (int) (2);
- //BA.debugLineNum = 218;BA.debugLine="ChatActivity.Perfil 		= \"RUTA\"";
+ //BA.debugLineNum = 220;BA.debugLine="ChatActivity.Perfil 		= \"RUTA\"";
 parent.mostCurrent._chatactivity._perfil /*String*/  = "RUTA";
- //BA.debugLineNum = 220;BA.debugLine="Log(\"RUTA activo / \" & ChatActivity.perfil_usuar";
-anywheresoftware.b4a.keywords.Common.LogImpl("34063273","RUTA activo / "+BA.NumberToString(parent.mostCurrent._chatactivity._perfil_usuario /*int*/ ),0);
+ //BA.debugLineNum = 222;BA.debugLine="Log(\"RUTA activo / \" & ChatActivity.perfil_usuar";
+anywheresoftware.b4a.keywords.Common.LogImpl("327852841","RUTA activo / "+BA.NumberToString(parent.mostCurrent._chatactivity._perfil_usuario /*int*/ ),0);
  if (true) break;
 
 case 7:
 //C
 this.state = 8;
- //BA.debugLineNum = 222;BA.debugLine="Return";
+ //BA.debugLineNum = 224;BA.debugLine="Return";
 if (true) return ;
  if (true) break;
 
@@ -1002,13 +1006,13 @@ case 8:
 //C
 this.state = 9;
 ;
- //BA.debugLineNum = 225;BA.debugLine="rm1.Close";
+ //BA.debugLineNum = 227;BA.debugLine="rm1.Close";
 _rm1.Close();
- //BA.debugLineNum = 226;BA.debugLine="rm2.Close";
+ //BA.debugLineNum = 228;BA.debugLine="rm2.Close";
 _rm2.Close();
- //BA.debugLineNum = 228;BA.debugLine="Msgbox2Async(\"Enviar datos a la ECU?\", \"Corner Li";
+ //BA.debugLineNum = 230;BA.debugLine="Msgbox2Async(\"Enviar datos a la ECU?\", \"Corner Li";
 anywheresoftware.b4a.keywords.Common.Msgbox2Async(BA.ObjectToCharSequence("Enviar datos a la ECU?"),BA.ObjectToCharSequence("Corner Light"),"SI","","NO",(anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper(), (android.graphics.Bitmap)(anywheresoftware.b4a.keywords.Common.Null)),processBA,anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 229;BA.debugLine="Wait For Msgbox_Result (Result As Int)";
+ //BA.debugLineNum = 231;BA.debugLine="Wait For Msgbox_Result (Result As Int)";
 anywheresoftware.b4a.keywords.Common.WaitFor("msgbox_result", processBA, this, null);
 this.state = 14;
 return;
@@ -1017,7 +1021,7 @@ case 14:
 this.state = 9;
 _result = (Integer) result[0];
 ;
- //BA.debugLineNum = 231;BA.debugLine="If Result = DialogResponse.POSITIVE Then";
+ //BA.debugLineNum = 233;BA.debugLine="If Result = DialogResponse.POSITIVE Then";
 if (true) break;
 
 case 9:
@@ -1030,7 +1034,7 @@ this.state = 11;
 case 11:
 //C
 this.state = 12;
- //BA.debugLineNum = 232;BA.debugLine="EnviarDatos(False,ChatActivity.perfil_usuario)";
+ //BA.debugLineNum = 234;BA.debugLine="EnviarDatos(False,ChatActivity.perfil_usuario)";
 _enviardatos(anywheresoftware.b4a.keywords.Common.False,parent.mostCurrent._chatactivity._perfil_usuario /*int*/ );
  if (true) break;
 
@@ -1038,11 +1042,11 @@ case 12:
 //C
 this.state = -1;
 ;
- //BA.debugLineNum = 235;BA.debugLine="Activity.Finish";
+ //BA.debugLineNum = 237;BA.debugLine="Activity.Finish";
 parent.mostCurrent._activity.Finish();
- //BA.debugLineNum = 236;BA.debugLine="StartActivity(ChatActivity)";
+ //BA.debugLineNum = 238;BA.debugLine="StartActivity(ChatActivity)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(parent.mostCurrent._chatactivity.getObject()));
- //BA.debugLineNum = 237;BA.debugLine="End Sub";
+ //BA.debugLineNum = 239;BA.debugLine="End Sub";
 if (true) break;
 
             }
@@ -1073,84 +1077,84 @@ return "";
 }
 public static String  _see_angulo_valuechanged(int _value,boolean _userchanged) throws Exception{
 float _val = 0f;
- //BA.debugLineNum = 301;BA.debugLine="Private Sub see_angulo_ValueChanged (Value As Int,";
- //BA.debugLineNum = 302;BA.debugLine="Private val As Float";
+ //BA.debugLineNum = 303;BA.debugLine="Private Sub see_angulo_ValueChanged (Value As Int,";
+ //BA.debugLineNum = 304;BA.debugLine="Private val As Float";
 _val = 0f;
- //BA.debugLineNum = 303;BA.debugLine="val = Value /2";
+ //BA.debugLineNum = 305;BA.debugLine="val = Value /2";
 _val = (float) (_value/(double)2);
- //BA.debugLineNum = 305;BA.debugLine="lb_ang_disparo.Text 	= val";
+ //BA.debugLineNum = 307;BA.debugLine="lb_ang_disparo.Text 	= val";
 mostCurrent._lb_ang_disparo.setText(BA.ObjectToCharSequence(_val));
- //BA.debugLineNum = 306;BA.debugLine="ChatActivity.lim 		= val";
+ //BA.debugLineNum = 308;BA.debugLine="ChatActivity.lim 		= val";
 mostCurrent._chatactivity._lim /*float*/  = _val;
- //BA.debugLineNum = 307;BA.debugLine="ChatActivity.Ang_Limite = val";
+ //BA.debugLineNum = 309;BA.debugLine="ChatActivity.Ang_Limite = val";
 mostCurrent._chatactivity._ang_limite /*float*/  = _val;
- //BA.debugLineNum = 309;BA.debugLine="If see_angulo2.Value > see_angulo.Value Then";
+ //BA.debugLineNum = 311;BA.debugLine="If see_angulo2.Value > see_angulo.Value Then";
 if (mostCurrent._see_angulo2.getValue()>mostCurrent._see_angulo.getValue()) { 
- //BA.debugLineNum = 310;BA.debugLine="see_angulo2.Value = see_angulo.Value-1";
+ //BA.debugLineNum = 312;BA.debugLine="see_angulo2.Value = see_angulo.Value-1";
 mostCurrent._see_angulo2.setValue((int) (mostCurrent._see_angulo.getValue()-1));
  };
- //BA.debugLineNum = 312;BA.debugLine="End Sub";
+ //BA.debugLineNum = 314;BA.debugLine="End Sub";
 return "";
 }
 public static String  _see_angulo2_valuechanged(int _value,boolean _userchanged) throws Exception{
 float _val = 0f;
- //BA.debugLineNum = 314;BA.debugLine="Private Sub see_angulo2_ValueChanged (Value As Int";
- //BA.debugLineNum = 315;BA.debugLine="Private val As Float";
+ //BA.debugLineNum = 316;BA.debugLine="Private Sub see_angulo2_ValueChanged (Value As Int";
+ //BA.debugLineNum = 317;BA.debugLine="Private val As Float";
 _val = 0f;
- //BA.debugLineNum = 316;BA.debugLine="val = Value / 2";
+ //BA.debugLineNum = 318;BA.debugLine="val = Value / 2";
 _val = (float) (_value/(double)2);
- //BA.debugLineNum = 318;BA.debugLine="If val < lb_ang_disparo.Text Then";
+ //BA.debugLineNum = 320;BA.debugLine="If val < lb_ang_disparo.Text Then";
 if (_val<(double)(Double.parseDouble(mostCurrent._lb_ang_disparo.getText()))) { 
- //BA.debugLineNum = 319;BA.debugLine="lb_ang_apagado.Text		 = val";
+ //BA.debugLineNum = 321;BA.debugLine="lb_ang_apagado.Text		 = val";
 mostCurrent._lb_ang_apagado.setText(BA.ObjectToCharSequence(_val));
- //BA.debugLineNum = 320;BA.debugLine="ChatActivity.lim2		 = val";
+ //BA.debugLineNum = 322;BA.debugLine="ChatActivity.lim2		 = val";
 mostCurrent._chatactivity._lim2 /*float*/  = _val;
- //BA.debugLineNum = 321;BA.debugLine="ChatActivity.Ang_Limite2 = val";
+ //BA.debugLineNum = 323;BA.debugLine="ChatActivity.Ang_Limite2 = val";
 mostCurrent._chatactivity._ang_limite2 /*float*/  = _val;
  }else {
- //BA.debugLineNum = 323;BA.debugLine="see_angulo2.Value= see_angulo.Value-1";
+ //BA.debugLineNum = 325;BA.debugLine="see_angulo2.Value= see_angulo.Value-1";
 mostCurrent._see_angulo2.setValue((int) (mostCurrent._see_angulo.getValue()-1));
  };
- //BA.debugLineNum = 325;BA.debugLine="End Sub";
+ //BA.debugLineNum = 327;BA.debugLine="End Sub";
 return "";
 }
 public static String  _see_gyro_escala_valuechanged(int _value,boolean _userchanged) throws Exception{
- //BA.debugLineNum = 367;BA.debugLine="Private Sub see_gyro_escala_ValueChanged (Value As";
- //BA.debugLineNum = 368;BA.debugLine="gyro_esc=Value+1";
+ //BA.debugLineNum = 369;BA.debugLine="Private Sub see_gyro_escala_ValueChanged (Value As";
+ //BA.debugLineNum = 370;BA.debugLine="gyro_esc=Value+1";
 _gyro_esc = (int) (_value+1);
- //BA.debugLineNum = 369;BA.debugLine="lb_Gyro_escala.Text = Value+1";
+ //BA.debugLineNum = 371;BA.debugLine="lb_Gyro_escala.Text = Value+1";
 mostCurrent._lb_gyro_escala.setText(BA.ObjectToCharSequence(_value+1));
- //BA.debugLineNum = 370;BA.debugLine="End Sub";
+ //BA.debugLineNum = 372;BA.debugLine="End Sub";
 return "";
 }
 public static String  _see_imu_valuechanged(int _value,boolean _userchanged) throws Exception{
- //BA.debugLineNum = 347;BA.debugLine="Private Sub see_imu_ValueChanged (Value As Int, Us";
- //BA.debugLineNum = 348;BA.debugLine="lb_delay.Text= Value+2";
+ //BA.debugLineNum = 349;BA.debugLine="Private Sub see_imu_ValueChanged (Value As Int, Us";
+ //BA.debugLineNum = 350;BA.debugLine="lb_delay.Text= Value+2";
 mostCurrent._lb_delay.setText(BA.ObjectToCharSequence(_value+2));
- //BA.debugLineNum = 349;BA.debugLine="End Sub";
+ //BA.debugLineNum = 351;BA.debugLine="End Sub";
 return "";
 }
 public static String  _see_pasa_bajos_valuechanged(int _value,boolean _userchanged) throws Exception{
- //BA.debugLineNum = 351;BA.debugLine="Private Sub see_pasa_bajos_ValueChanged (Value As";
- //BA.debugLineNum = 352;BA.debugLine="lb_pasa_bajos.Text = Value+1";
+ //BA.debugLineNum = 353;BA.debugLine="Private Sub see_pasa_bajos_ValueChanged (Value As";
+ //BA.debugLineNum = 354;BA.debugLine="lb_pasa_bajos.Text = Value+1";
 mostCurrent._lb_pasa_bajos.setText(BA.ObjectToCharSequence(_value+1));
- //BA.debugLineNum = 353;BA.debugLine="End Sub";
+ //BA.debugLineNum = 355;BA.debugLine="End Sub";
 return "";
 }
 public static String  _see_sencibilidad_valuechanged(int _value,boolean _userchanged) throws Exception{
- //BA.debugLineNum = 297;BA.debugLine="Private Sub see_sencibilidad_ValueChanged (Value A";
- //BA.debugLineNum = 298;BA.debugLine="lb_sencibilidad.Text = Value +1";
+ //BA.debugLineNum = 299;BA.debugLine="Private Sub see_sencibilidad_ValueChanged (Value A";
+ //BA.debugLineNum = 300;BA.debugLine="lb_sencibilidad.Text = Value +1";
 mostCurrent._lb_sencibilidad.setText(BA.ObjectToCharSequence(_value+1));
- //BA.debugLineNum = 299;BA.debugLine="End Sub";
+ //BA.debugLineNum = 301;BA.debugLine="End Sub";
 return "";
 }
 public static String  _see_yaw_valuechanged(int _value,boolean _userchanged) throws Exception{
- //BA.debugLineNum = 355;BA.debugLine="Private Sub see_yaw_ValueChanged (Value As Int, Us";
- //BA.debugLineNum = 356;BA.debugLine="yaw=Value";
+ //BA.debugLineNum = 357;BA.debugLine="Private Sub see_yaw_ValueChanged (Value As Int, Us";
+ //BA.debugLineNum = 358;BA.debugLine="yaw=Value";
 _yaw = _value;
- //BA.debugLineNum = 357;BA.debugLine="lb_yaw.Text = Value";
+ //BA.debugLineNum = 359;BA.debugLine="lb_yaw.Text = Value";
 mostCurrent._lb_yaw.setText(BA.ObjectToCharSequence(_value));
- //BA.debugLineNum = 358;BA.debugLine="End Sub";
+ //BA.debugLineNum = 360;BA.debugLine="End Sub";
 return "";
 }
 }

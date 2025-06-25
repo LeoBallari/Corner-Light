@@ -54,7 +54,7 @@ public String  _admin_devicefound(String _name,String _macaddress) throws Except
 Corner.Light.Bluetooth.bluetoothmanager._nameandmac _nm = null;
  //BA.debugLineNum = 86;BA.debugLine="Private Sub Admin_DeviceFound (Name As String, Mac";
  //BA.debugLineNum = 87;BA.debugLine="Log(Name & \":\" & MacAddress)";
-__c.LogImpl("35570561",_name+":"+_macaddress,0);
+__c.LogImpl("329360129",_name+":"+_macaddress,0);
  //BA.debugLineNum = 88;BA.debugLine="Dim nm As NameAndMac";
 _nm = new Corner.Light.Bluetooth.bluetoothmanager._nameandmac();
  //BA.debugLineNum = 89;BA.debugLine="nm.Name = Name";
@@ -76,7 +76,7 @@ return "";
 public String  _admin_statechanged(int _newstate,int _oldstate) throws Exception{
  //BA.debugLineNum = 24;BA.debugLine="Private Sub Admin_StateChanged (NewState As Int, O";
  //BA.debugLineNum = 25;BA.debugLine="Log(\"Cambio de Estado: \" & NewState)";
-__c.LogImpl("34915201","Cambio de Estado: "+BA.NumberToString(_newstate),0);
+__c.LogImpl("328704769","Cambio de Estado: "+BA.NumberToString(_newstate),0);
  //BA.debugLineNum = 26;BA.debugLine="BluetoothState = NewState = admin.STATE_ON";
 _bluetoothstate = _newstate==_admin.STATE_ON;
  //BA.debugLineNum = 27;BA.debugLine="NotifyOfStateChanged";
@@ -225,7 +225,7 @@ return "";
 public String  _serial_connected(boolean _success) throws Exception{
  //BA.debugLineNum = 34;BA.debugLine="Private Sub Serial_Connected (Success As Boolean)";
  //BA.debugLineNum = 35;BA.debugLine="Log(\"Conectado: \" & Success)";
-__c.LogImpl("35046273","Conectado: "+BA.ObjectToString(_success),0);
+__c.LogImpl("328835841","Conectado: "+BA.ObjectToString(_success),0);
  //BA.debugLineNum = 37;BA.debugLine="CallSub2(Main, \"AfterConnect\", Success) 'allow th";
 __c.CallSubNew2(ba,(Object)(_main.getObject()),"AfterConnect",(Object)(_success));
  //BA.debugLineNum = 38;BA.debugLine="ConnectionState = Success";
@@ -233,7 +233,7 @@ _connectionstate = _success;
  //BA.debugLineNum = 39;BA.debugLine="If Success = False Then";
 if (_success==__c.False) { 
  //BA.debugLineNum = 40;BA.debugLine="Log(LastException.Message)";
-__c.LogImpl("35046278",__c.LastException(getActivityBA()).getMessage(),0);
+__c.LogImpl("328835846",__c.LastException(getActivityBA()).getMessage(),0);
  }else {
  //BA.debugLineNum = 43;BA.debugLine="If AStream.IsInitialized Then AStream.Close";
 if (_astream.IsInitialized()) { 

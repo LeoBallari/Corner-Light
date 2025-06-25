@@ -433,7 +433,7 @@ mostCurrent._activity.LoadLayout("2",mostCurrent.activityBA);
  //BA.debugLineNum = 111;BA.debugLine="If Starter.Manager.ConnectionState=True Then";
 if (mostCurrent._starter._manager /*Corner.Light.Bluetooth.bluetoothmanager*/ ._connectionstate /*boolean*/ ==anywheresoftware.b4a.keywords.Common.True) { 
  //BA.debugLineNum = 112;BA.debugLine="Log(\"Dejo de leer sensores del telefono\")";
-anywheresoftware.b4a.keywords.Common.LogImpl("31638404","Dejo de leer sensores del telefono",0);
+anywheresoftware.b4a.keywords.Common.LogImpl("3458756","Dejo de leer sensores del telefono",0);
  //BA.debugLineNum = 113;BA.debugLine="ps.StopListening";
 _ps.StopListening(processBA);
  }else {
@@ -442,7 +442,7 @@ mostCurrent._starter._manager /*Corner.Light.Bluetooth.bluetoothmanager*/ ._disc
  //BA.debugLineNum = 117;BA.debugLine="If Main.Simulador=True Then";
 if (mostCurrent._main._simulador /*boolean*/ ==anywheresoftware.b4a.keywords.Common.True) { 
  //BA.debugLineNum = 118;BA.debugLine="Log(\"Simulador Activo\")";
-anywheresoftware.b4a.keywords.Common.LogImpl("31638410","Simulador Activo",0);
+anywheresoftware.b4a.keywords.Common.LogImpl("3458762","Simulador Activo",0);
  //BA.debugLineNum = 120;BA.debugLine="ps.Initialize(ps.TYPE_ACCELEROMETER)";
 _ps.Initialize(_ps.TYPE_ACCELEROMETER);
  };
@@ -511,7 +511,7 @@ mostCurrent._activity.Finish();
  //BA.debugLineNum = 331;BA.debugLine="StartActivity(Main)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._main.getObject()));
  //BA.debugLineNum = 332;BA.debugLine="Log(\"Simulador Desactivado\")";
-anywheresoftware.b4a.keywords.Common.LogImpl("32162698","Simulador Desactivado",0);
+anywheresoftware.b4a.keywords.Common.LogImpl("3983050","Simulador Desactivado",0);
  };
  //BA.debugLineNum = 334;BA.debugLine="End Sub";
 return false;
@@ -533,8 +533,6 @@ try { //BA.debugLineNum = 166;BA.debugLine="If Main.Simulador=False Then";
 if (mostCurrent._main._simulador /*boolean*/ ==anywheresoftware.b4a.keywords.Common.False) { 
  //BA.debugLineNum = 167;BA.debugLine="Timer2.Enabled=False";
 _timer2.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 168;BA.debugLine="Log(\"Timer2 APAGADO\")";
-anywheresoftware.b4a.keywords.Common.LogImpl("31703940","Timer2 APAGADO",0);
  //BA.debugLineNum = 169;BA.debugLine="ps.StopListening";
 _ps.StopListening(processBA);
  }else {
@@ -542,8 +540,6 @@ _ps.StopListening(processBA);
 _timer2.Initialize(processBA,"timer2",(long) (20));
  //BA.debugLineNum = 173;BA.debugLine="Timer2.Enabled=True";
 _timer2.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 174;BA.debugLine="Log(\"Timer2 ENCENDIDO\")";
-anywheresoftware.b4a.keywords.Common.LogImpl("31703946","Timer2 ENCENDIDO",0);
  //BA.debugLineNum = 176;BA.debugLine="ps.StartListening(\"Orientacion\")";
 _ps.StartListening(processBA,"Orientacion");
  };
@@ -558,9 +554,9 @@ mostCurrent._lb_limite1.setText(BA.ObjectToCharSequence(anywheresoftware.b4a.key
  //BA.debugLineNum = 190;BA.debugLine="lb_Limite2.Text= Round2(Ang_Limite2,1)";
 mostCurrent._lb_limite2.setText(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.Round2(_ang_limite2,(int) (1))));
  } 
-       catch (Exception e18) {
-			processBA.setLastException(e18); //BA.debugLineNum = 192;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("31703964",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+       catch (Exception e16) {
+			processBA.setLastException(e16); //BA.debugLineNum = 192;BA.debugLine="Log(LastException)";
+anywheresoftware.b4a.keywords.Common.LogImpl("3524316",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 194;BA.debugLine="End Sub";
 return "";
@@ -628,7 +624,7 @@ _mens = _mens+mostCurrent._lb_ang1.getText()+",";
  //BA.debugLineNum = 686;BA.debugLine="mens = mens & lb_ang2.Text";
 _mens = _mens+mostCurrent._lb_ang2.getText();
  //BA.debugLineNum = 688;BA.debugLine="Log(mens)";
-anywheresoftware.b4a.keywords.Common.LogImpl("33407907",_mens,0);
+anywheresoftware.b4a.keywords.Common.LogImpl("32162723",_mens,0);
  //BA.debugLineNum = 689;BA.debugLine="If Ang_Limite <> 0 And Ang_Limite2 <> 0 Then";
 if (_ang_limite!=0 && _ang_limite2!=0) { 
  //BA.debugLineNum = 690;BA.debugLine="ToastMessageShow(\"Enviando Datos y Guardandolos";
@@ -721,7 +717,7 @@ _mens = "MANUAL";
 _mens = "AUTO";
  };
  //BA.debugLineNum = 618;BA.debugLine="Log(mens)";
-anywheresoftware.b4a.keywords.Common.LogImpl("32949128",_mens,0);
+anywheresoftware.b4a.keywords.Common.LogImpl("31769480",_mens,0);
  //BA.debugLineNum = 620;BA.debugLine="Starter.Manager.SendMessage(mens)";
 mostCurrent._starter._manager /*Corner.Light.Bluetooth.bluetoothmanager*/ ._sendmessage /*String*/ (_mens);
  //BA.debugLineNum = 621;BA.debugLine="End Sub";
@@ -909,7 +905,7 @@ mostCurrent._cadena = anywheresoftware.b4a.keywords.Common.Regex.Split(",",_msg)
  //BA.debugLineNum = 343;BA.debugLine="If cadena(0) <> \"CL\" Or cadena(0).Length <> 2 The";
 if ((mostCurrent._cadena[(int) (0)]).equals("CL") == false || mostCurrent._cadena[(int) (0)].length()!=2) { 
  //BA.debugLineNum = 344;BA.debugLine="Log(\"ERROR\")";
-anywheresoftware.b4a.keywords.Common.LogImpl("32293764","ERROR",0);
+anywheresoftware.b4a.keywords.Common.LogImpl("31114116","ERROR",0);
  //BA.debugLineNum = 345;BA.debugLine="Return";
 if (true) return "";
  };
@@ -1021,7 +1017,7 @@ if (true) return "";
  } 
        catch (Exception e65) {
 			processBA.setLastException(e65); //BA.debugLineNum = 428;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("32293848",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("31114200",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 430;BA.debugLine="End Sub";
 return "";
@@ -1189,7 +1185,7 @@ _mens = "SAL,";
  //BA.debugLineNum = 575;BA.debugLine="mens = mens & modo & \",\" & sal_izq & \",\" & sal_de";
 _mens = _mens+BA.NumberToString(_modo)+","+BA.NumberToString(_sal_izq)+","+BA.NumberToString(_sal_der);
  //BA.debugLineNum = 577;BA.debugLine="Log(mens)";
-anywheresoftware.b4a.keywords.Common.LogImpl("32752533",_mens,0);
+anywheresoftware.b4a.keywords.Common.LogImpl("31572885",_mens,0);
  //BA.debugLineNum = 578;BA.debugLine="Starter.Manager.SendMessage(mens)";
 mostCurrent._starter._manager /*Corner.Light.Bluetooth.bluetoothmanager*/ ._sendmessage /*String*/ (_mens);
  //BA.debugLineNum = 579;BA.debugLine="End Sub";
@@ -1249,7 +1245,7 @@ _fusion_sensores((float)(Double.parseDouble(mostCurrent._angulo_acce)),(float) (
  } 
        catch (Exception e4) {
 			processBA.setLastException(e4); //BA.debugLineNum = 236;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("31900549",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("3720901",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 238;BA.debugLine="End Sub";
 return "";
