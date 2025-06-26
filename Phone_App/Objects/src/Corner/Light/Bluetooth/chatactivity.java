@@ -562,22 +562,22 @@ anywheresoftware.b4a.keywords.Common.LogImpl("3524316",BA.ObjectToString(anywher
 return "";
 }
 public static String  _ang_maximos(float _angulo) throws Exception{
- //BA.debugLineNum = 451;BA.debugLine="Private Sub Ang_Maximos(angulo As Float)";
- //BA.debugLineNum = 453;BA.debugLine="If (angulo < -0.5 And angulo*-1 > max_ang_izq) Th";
+ //BA.debugLineNum = 450;BA.debugLine="Private Sub Ang_Maximos(angulo As Float)";
+ //BA.debugLineNum = 452;BA.debugLine="If (angulo < -0.5 And angulo*-1 > max_ang_izq) Th";
 if ((_angulo<-0.5 && _angulo*-1>_max_ang_izq)) { 
- //BA.debugLineNum = 454;BA.debugLine="max_ang_izq = angulo*-1";
+ //BA.debugLineNum = 453;BA.debugLine="max_ang_izq = angulo*-1";
 _max_ang_izq = (float) (_angulo*-1);
  };
- //BA.debugLineNum = 457;BA.debugLine="If (angulo > 0.5 And angulo > max_ang_der) Then";
+ //BA.debugLineNum = 456;BA.debugLine="If (angulo > 0.5 And angulo > max_ang_der) Then";
 if ((_angulo>0.5 && _angulo>_max_ang_der)) { 
- //BA.debugLineNum = 458;BA.debugLine="max_ang_der = angulo";
+ //BA.debugLineNum = 457;BA.debugLine="max_ang_der = angulo";
 _max_ang_der = _angulo;
  };
- //BA.debugLineNum = 461;BA.debugLine="lb_angMAX_izq.Text = Round2(max_ang_izq,1)";
+ //BA.debugLineNum = 460;BA.debugLine="lb_angMAX_izq.Text = Round2(max_ang_izq,1)";
 mostCurrent._lb_angmax_izq.setText(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.Round2(_max_ang_izq,(int) (1))));
- //BA.debugLineNum = 462;BA.debugLine="lb_angMAX_der.Text = Round2(max_ang_der,1)";
+ //BA.debugLineNum = 461;BA.debugLine="lb_angMAX_der.Text = Round2(max_ang_der,1)";
 mostCurrent._lb_angmax_der.setText(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.Round2(_max_ang_der,(int) (1))));
- //BA.debugLineNum = 463;BA.debugLine="End Sub";
+ //BA.debugLineNum = 462;BA.debugLine="End Sub";
 return "";
 }
 public static String  _btn_aceptar_click() throws Exception{
@@ -648,99 +648,99 @@ mostCurrent._pn_cal_ang.setVisible(anywheresoftware.b4a.keywords.Common.True);
 return "";
 }
 public static String  _btn_config_click() throws Exception{
- //BA.debugLineNum = 536;BA.debugLine="Private Sub btn_config_Click";
- //BA.debugLineNum = 537;BA.debugLine="StartActivity(ConfigActivity)";
+ //BA.debugLineNum = 535;BA.debugLine="Private Sub btn_config_Click";
+ //BA.debugLineNum = 536;BA.debugLine="StartActivity(ConfigActivity)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._configactivity.getObject()));
- //BA.debugLineNum = 539;BA.debugLine="primera_vez=True";
+ //BA.debugLineNum = 538;BA.debugLine="primera_vez=True";
 _primera_vez = anywheresoftware.b4a.keywords.Common.True;
- //BA.debugLineNum = 542;BA.debugLine="End Sub";
+ //BA.debugLineNum = 541;BA.debugLine="End Sub";
 return "";
 }
 public static String  _btn_forzar_salida_der_click() throws Exception{
- //BA.debugLineNum = 595;BA.debugLine="Private Sub btn_forzar_salida_der_Click";
- //BA.debugLineNum = 596;BA.debugLine="If pn_cal_ang.Visible=False Then";
+ //BA.debugLineNum = 594;BA.debugLine="Private Sub btn_forzar_salida_der_Click";
+ //BA.debugLineNum = 595;BA.debugLine="If pn_cal_ang.Visible=False Then";
 if (mostCurrent._pn_cal_ang.getVisible()==anywheresoftware.b4a.keywords.Common.False) { 
- //BA.debugLineNum = 597;BA.debugLine="If btn_der_state = False Then";
+ //BA.debugLineNum = 596;BA.debugLine="If btn_der_state = False Then";
 if (_btn_der_state==anywheresoftware.b4a.keywords.Common.False) { 
- //BA.debugLineNum = 598;BA.debugLine="btn_der_state=True";
+ //BA.debugLineNum = 597;BA.debugLine="btn_der_state=True";
 _btn_der_state = anywheresoftware.b4a.keywords.Common.True;
  }else {
- //BA.debugLineNum = 600;BA.debugLine="btn_der_state=False";
+ //BA.debugLineNum = 599;BA.debugLine="btn_der_state=False";
 _btn_der_state = anywheresoftware.b4a.keywords.Common.False;
  };
- //BA.debugLineNum = 603;BA.debugLine="Salidas_manual";
+ //BA.debugLineNum = 602;BA.debugLine="Salidas_manual";
 _salidas_manual();
  }else {
- //BA.debugLineNum = 605;BA.debugLine="pn_cal_ang.Visible=False";
+ //BA.debugLineNum = 604;BA.debugLine="pn_cal_ang.Visible=False";
 mostCurrent._pn_cal_ang.setVisible(anywheresoftware.b4a.keywords.Common.False);
  };
- //BA.debugLineNum = 607;BA.debugLine="End Sub";
+ //BA.debugLineNum = 606;BA.debugLine="End Sub";
 return "";
 }
 public static String  _btn_forzar_salida_izq_click() throws Exception{
- //BA.debugLineNum = 581;BA.debugLine="Private Sub btn_forzar_salida_izq_Click";
- //BA.debugLineNum = 582;BA.debugLine="If pn_cal_ang.Visible=False Then";
+ //BA.debugLineNum = 580;BA.debugLine="Private Sub btn_forzar_salida_izq_Click";
+ //BA.debugLineNum = 581;BA.debugLine="If pn_cal_ang.Visible=False Then";
 if (mostCurrent._pn_cal_ang.getVisible()==anywheresoftware.b4a.keywords.Common.False) { 
- //BA.debugLineNum = 583;BA.debugLine="If btn_izq_state = False Then";
+ //BA.debugLineNum = 582;BA.debugLine="If btn_izq_state = False Then";
 if (_btn_izq_state==anywheresoftware.b4a.keywords.Common.False) { 
- //BA.debugLineNum = 584;BA.debugLine="btn_izq_state=True";
+ //BA.debugLineNum = 583;BA.debugLine="btn_izq_state=True";
 _btn_izq_state = anywheresoftware.b4a.keywords.Common.True;
  }else {
- //BA.debugLineNum = 586;BA.debugLine="btn_izq_state=False";
+ //BA.debugLineNum = 585;BA.debugLine="btn_izq_state=False";
 _btn_izq_state = anywheresoftware.b4a.keywords.Common.False;
  };
- //BA.debugLineNum = 589;BA.debugLine="Salidas_manual";
+ //BA.debugLineNum = 588;BA.debugLine="Salidas_manual";
 _salidas_manual();
  }else {
- //BA.debugLineNum = 591;BA.debugLine="pn_cal_ang.Visible=False";
+ //BA.debugLineNum = 590;BA.debugLine="pn_cal_ang.Visible=False";
 mostCurrent._pn_cal_ang.setVisible(anywheresoftware.b4a.keywords.Common.False);
  };
- //BA.debugLineNum = 593;BA.debugLine="End Sub";
+ //BA.debugLineNum = 592;BA.debugLine="End Sub";
 return "";
 }
 public static String  _btn_menu_click() throws Exception{
- //BA.debugLineNum = 466;BA.debugLine="Private Sub btn_Menu_Click";
- //BA.debugLineNum = 533;BA.debugLine="End Sub";
+ //BA.debugLineNum = 465;BA.debugLine="Private Sub btn_Menu_Click";
+ //BA.debugLineNum = 532;BA.debugLine="End Sub";
 return "";
 }
 public static String  _btn_on_off_click() throws Exception{
 String _mens = "";
- //BA.debugLineNum = 610;BA.debugLine="Private Sub btn_on_off_Click";
- //BA.debugLineNum = 611;BA.debugLine="Dim mens As String";
+ //BA.debugLineNum = 609;BA.debugLine="Private Sub btn_on_off_Click";
+ //BA.debugLineNum = 610;BA.debugLine="Dim mens As String";
 _mens = "";
- //BA.debugLineNum = 613;BA.debugLine="If modo = 1 Then";
+ //BA.debugLineNum = 612;BA.debugLine="If modo = 1 Then";
 if (_modo==1) { 
- //BA.debugLineNum = 614;BA.debugLine="mens = \"MANUAL\"";
+ //BA.debugLineNum = 613;BA.debugLine="mens = \"MANUAL\"";
 _mens = "MANUAL";
  }else {
- //BA.debugLineNum = 616;BA.debugLine="mens = \"AUTO\"";
+ //BA.debugLineNum = 615;BA.debugLine="mens = \"AUTO\"";
 _mens = "AUTO";
  };
  //BA.debugLineNum = 618;BA.debugLine="Log(mens)";
-anywheresoftware.b4a.keywords.Common.LogImpl("31769480",_mens,0);
+anywheresoftware.b4a.keywords.Common.LogImpl("31769481",_mens,0);
  //BA.debugLineNum = 620;BA.debugLine="Starter.Manager.SendMessage(mens)";
 mostCurrent._starter._manager /*Corner.Light.Bluetooth.bluetoothmanager*/ ._sendmessage /*String*/ (_mens);
  //BA.debugLineNum = 621;BA.debugLine="End Sub";
 return "";
 }
 public static String  _btn_reset_click() throws Exception{
- //BA.debugLineNum = 544;BA.debugLine="Private Sub btn_reset_Click";
- //BA.debugLineNum = 545;BA.debugLine="lb_angMAX_izq.Text = \"0.0 º\"";
+ //BA.debugLineNum = 543;BA.debugLine="Private Sub btn_reset_Click";
+ //BA.debugLineNum = 544;BA.debugLine="lb_angMAX_izq.Text = \"0.0 º\"";
 mostCurrent._lb_angmax_izq.setText(BA.ObjectToCharSequence("0.0 º"));
- //BA.debugLineNum = 546;BA.debugLine="lb_angMAX_der.Text = \"0.0 º\"";
+ //BA.debugLineNum = 545;BA.debugLine="lb_angMAX_der.Text = \"0.0 º\"";
 mostCurrent._lb_angmax_der.setText(BA.ObjectToCharSequence("0.0 º"));
- //BA.debugLineNum = 548;BA.debugLine="max_ang_izq=0";
+ //BA.debugLineNum = 547;BA.debugLine="max_ang_izq=0";
 _max_ang_izq = (float) (0);
- //BA.debugLineNum = 549;BA.debugLine="max_ang_der=0";
+ //BA.debugLineNum = 548;BA.debugLine="max_ang_der=0";
 _max_ang_der = (float) (0);
- //BA.debugLineNum = 550;BA.debugLine="End Sub";
+ //BA.debugLineNum = 549;BA.debugLine="End Sub";
 return "";
 }
 public static String  _btn_reset_inclina_click() throws Exception{
- //BA.debugLineNum = 552;BA.debugLine="Private Sub btn_reset_inclina_Click";
- //BA.debugLineNum = 553;BA.debugLine="Starter.Manager.SendMessage(\"OFF_SET\")";
+ //BA.debugLineNum = 551;BA.debugLine="Private Sub btn_reset_inclina_Click";
+ //BA.debugLineNum = 552;BA.debugLine="Starter.Manager.SendMessage(\"OFF_SET\")";
 mostCurrent._starter._manager /*Corner.Light.Bluetooth.bluetoothmanager*/ ._sendmessage /*String*/ ("OFF_SET");
- //BA.debugLineNum = 554;BA.debugLine="End Sub";
+ //BA.debugLineNum = 553;BA.debugLine="End Sub";
 return "";
 }
 public static String  _fusion_sensores(float _val_acc,float _val_gyro) throws Exception{
@@ -868,19 +868,18 @@ public static String  _img_fondo_click() throws Exception{
 return "";
 }
 public static String  _leds(int _led_izq,int _led_der) throws Exception{
-String _aler = "";
 String _mens = "";
  //BA.debugLineNum = 432;BA.debugLine="Private Sub Leds(led_izq As Int, led_der As Int)";
- //BA.debugLineNum = 433;BA.debugLine="Dim aler As String";
-_aler = "";
- //BA.debugLineNum = 434;BA.debugLine="Dim mens As String";
+ //BA.debugLineNum = 433;BA.debugLine="Dim mens As String";
 _mens = "";
- //BA.debugLineNum = 436;BA.debugLine="If led_izq=0 Then";
+ //BA.debugLineNum = 434;BA.debugLine="Log(led_izq)";
+anywheresoftware.b4a.keywords.Common.LogImpl("31179650",BA.NumberToString(_led_izq),0);
+ //BA.debugLineNum = 435;BA.debugLine="Log(led_der)";
+anywheresoftware.b4a.keywords.Common.LogImpl("31179651",BA.NumberToString(_led_der),0);
+ //BA.debugLineNum = 437;BA.debugLine="If led_izq=0 Then";
 if (_led_izq==0) { 
- //BA.debugLineNum = 437;BA.debugLine="img_Led_izq_on.Visible=True";
+ //BA.debugLineNum = 438;BA.debugLine="img_Led_izq_on.Visible=True";
 mostCurrent._img_led_izq_on.setVisible(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 438;BA.debugLine="aler = \"LUZ IZQUIERDA\"";
-_aler = "LUZ IZQUIERDA";
  }else {
  //BA.debugLineNum = 440;BA.debugLine="img_Led_izq_on.Visible=False";
 mostCurrent._img_led_izq_on.setVisible(anywheresoftware.b4a.keywords.Common.False);
@@ -889,13 +888,11 @@ mostCurrent._img_led_izq_on.setVisible(anywheresoftware.b4a.keywords.Common.Fals
 if (_led_der==0) { 
  //BA.debugLineNum = 444;BA.debugLine="img_Led_der_on.Visible=True";
 mostCurrent._img_led_der_on.setVisible(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 445;BA.debugLine="aler = \"LUZ DERECHA\"";
-_aler = "LUZ DERECHA";
  }else {
- //BA.debugLineNum = 447;BA.debugLine="img_Led_der_on.Visible=False";
+ //BA.debugLineNum = 446;BA.debugLine="img_Led_der_on.Visible=False";
 mostCurrent._img_led_der_on.setVisible(anywheresoftware.b4a.keywords.Common.False);
  };
- //BA.debugLineNum = 449;BA.debugLine="End Sub";
+ //BA.debugLineNum = 448;BA.debugLine="End Sub";
 return "";
 }
 public static String  _logmessage(String _msg) throws Exception{
@@ -1156,39 +1153,39 @@ return "";
 }
 public static String  _salidas_manual() throws Exception{
 String _mens = "";
- //BA.debugLineNum = 556;BA.debugLine="Private Sub Salidas_manual()";
- //BA.debugLineNum = 557;BA.debugLine="Dim mens As String";
+ //BA.debugLineNum = 555;BA.debugLine="Private Sub Salidas_manual()";
+ //BA.debugLineNum = 556;BA.debugLine="Dim mens As String";
 _mens = "";
- //BA.debugLineNum = 558;BA.debugLine="Dim sal_izq,sal_der As Int";
+ //BA.debugLineNum = 557;BA.debugLine="Dim sal_izq,sal_der As Int";
 _sal_izq = 0;
 _sal_der = 0;
- //BA.debugLineNum = 560;BA.debugLine="If btn_izq_state = True Then";
+ //BA.debugLineNum = 559;BA.debugLine="If btn_izq_state = True Then";
 if (_btn_izq_state==anywheresoftware.b4a.keywords.Common.True) { 
- //BA.debugLineNum = 561;BA.debugLine="sal_izq = 0";
+ //BA.debugLineNum = 560;BA.debugLine="sal_izq = 0";
 _sal_izq = (int) (0);
  }else {
- //BA.debugLineNum = 563;BA.debugLine="sal_izq = 1";
+ //BA.debugLineNum = 562;BA.debugLine="sal_izq = 1";
 _sal_izq = (int) (1);
  };
- //BA.debugLineNum = 566;BA.debugLine="If btn_der_state = True Then";
+ //BA.debugLineNum = 565;BA.debugLine="If btn_der_state = True Then";
 if (_btn_der_state==anywheresoftware.b4a.keywords.Common.True) { 
- //BA.debugLineNum = 567;BA.debugLine="sal_der = 0";
+ //BA.debugLineNum = 566;BA.debugLine="sal_der = 0";
 _sal_der = (int) (0);
  }else {
- //BA.debugLineNum = 569;BA.debugLine="sal_der = 1";
+ //BA.debugLineNum = 568;BA.debugLine="sal_der = 1";
 _sal_der = (int) (1);
  };
- //BA.debugLineNum = 572;BA.debugLine="modo = 1";
+ //BA.debugLineNum = 571;BA.debugLine="modo = 1";
 _modo = (int) (1);
- //BA.debugLineNum = 574;BA.debugLine="mens = \"SAL,\"";
+ //BA.debugLineNum = 573;BA.debugLine="mens = \"SAL,\"";
 _mens = "SAL,";
- //BA.debugLineNum = 575;BA.debugLine="mens = mens & modo & \",\" & sal_izq & \",\" & sal_de";
+ //BA.debugLineNum = 574;BA.debugLine="mens = mens & modo & \",\" & sal_izq & \",\" & sal_de";
 _mens = _mens+BA.NumberToString(_modo)+","+BA.NumberToString(_sal_izq)+","+BA.NumberToString(_sal_der);
- //BA.debugLineNum = 577;BA.debugLine="Log(mens)";
+ //BA.debugLineNum = 576;BA.debugLine="Log(mens)";
 anywheresoftware.b4a.keywords.Common.LogImpl("31572885",_mens,0);
- //BA.debugLineNum = 578;BA.debugLine="Starter.Manager.SendMessage(mens)";
+ //BA.debugLineNum = 577;BA.debugLine="Starter.Manager.SendMessage(mens)";
 mostCurrent._starter._manager /*Corner.Light.Bluetooth.bluetoothmanager*/ ._sendmessage /*String*/ (_mens);
- //BA.debugLineNum = 579;BA.debugLine="End Sub";
+ //BA.debugLineNum = 578;BA.debugLine="End Sub";
 return "";
 }
 public static String  _see_angulo_p_valuechanged(int _value,boolean _userchanged) throws Exception{

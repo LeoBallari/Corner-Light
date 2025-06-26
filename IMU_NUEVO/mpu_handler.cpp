@@ -67,12 +67,31 @@ void mpu_task_core0(void *pvParameters) {
                     der_auto = false;
                 }
 
-                if (izq_auto) {
+                // AGREGUE ESTO PARA ACOMPAÑAR EL CAMIO DE SENTIDO
+                if (!g_invertir){
+                    if (izq_auto) {
                      g_salidaLuzAuxIzq = SalidaIzquierda2(g_Roll, g_aLim * -1.0f, g_aLim2 * -1.0f);
+                    }
+                    if (der_auto) {
+                        g_salidaLuzAuxDer = SalidaDerecha2(g_Roll, g_aLim, g_aLim2);
+                    }
+                }else{
+                    if (izq_auto) {
+                     g_salidaLuzAuxIzq = SalidaDerecha2(g_Roll, g_aLim, g_aLim2);
+                    }
+                    if (der_auto) {
+                        g_salidaLuzAuxDer = SalidaIzquierda2(g_Roll, g_aLim * -1.0f, g_aLim2 * -1.0f);
+                    }
                 }
-                if (der_auto) {
-                    g_salidaLuzAuxDer = SalidaDerecha2(g_Roll, g_aLim, g_aLim2);
-                }
+                //--------------------------------------------------
+
+
+                // if (izq_auto) {
+                //      g_salidaLuzAuxIzq = SalidaIzquierda2(g_Roll, g_aLim * -1.0f, g_aLim2 * -1.0f);
+                // }
+                // if (der_auto) {
+                //     g_salidaLuzAuxDer = SalidaDerecha2(g_Roll, g_aLim, g_aLim2);
+                // }
 
             } else if (g_modo == MODO_MANUAL) {
                 g_salidaLuzAuxIzq = (g_Sal_IZQ_forzada == 0) ? SAL_ACT : SAL_DESACT;

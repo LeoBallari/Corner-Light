@@ -435,19 +435,16 @@ Sub LogMessage(Msg As String)
 End Sub
 
 Private Sub Leds(led_izq As Int, led_der As Int)
-	Dim aler As String
 	Dim mens As String
 	
 	If led_izq=0 Then
 		img_Led_izq_on.Visible=True
-		aler = "LUZ IZQUIERDA"
 	Else
 		img_Led_izq_on.Visible=False
 	End If
 	
 	If led_der = 0 Then
 		img_Led_der_on.Visible=True
-		aler = "LUZ DERECHA"
 	Else
 		img_Led_der_on.Visible=False
 	End If
@@ -621,7 +618,7 @@ Private Sub btn_on_off_Click
 		mens = "AUTO"
 	End If
 	
-	''Log(mens)
+	Log(mens)
 	
 	Starter.Manager.SendMessage(mens)
 End Sub

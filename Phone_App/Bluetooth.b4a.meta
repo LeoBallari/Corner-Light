@@ -22,6 +22,6 @@ ModuleClosedNodes4=
 ModuleClosedNodes5=
 ModuleClosedNodes6=
 ModuleClosedNodes7=
-NavigationStack=ChatActivity,Process_Globals,15,0,Diseñador Visual,Config.bal,-100,1,Diseñador Visual,4.bal,-100,1,Diseñador Visual,3.bal,-100,1,ConfigActivity,Globals,36,0,ConfigActivity,mnuRecuperarPerfil_click,178,0,ConfigActivity,mnuDiagnostico_Click,176,0,ChatActivity,btn_forzar_salida_der_Click,598,0,ChatActivity,Activity_Resume,171,0,ConfigActivity,EnviarDatos,151,6,ChatActivity,btn_on_off_Click,618,0
+NavigationStack=Diseñador Visual,Config.bal,-100,1,Diseñador Visual,4.bal,-100,1,Diseñador Visual,3.bal,-100,1,ConfigActivity,Globals,36,0,ConfigActivity,mnuRecuperarPerfil_click,178,0,ConfigActivity,mnuDiagnostico_Click,176,0,ChatActivity,btn_forzar_salida_der_Click,598,0,ChatActivity,Activity_Resume,171,0,ConfigActivity,EnviarDatos,151,6,ChatActivity,btn_on_off_Click,613,0,ChatActivity,Leds,433,2
 SelectedBuild=0
 VisibleModules=2,3
