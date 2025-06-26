@@ -253,6 +253,8 @@ int Decodifico(String msg) {
   else if (elemento0.equals("AUTO")) { // Usar else if
     if (xSemaphoreTake(xMutex_MPU_Data, portMAX_DELAY) == pdTRUE) {
       g_modo = MODO_AUTOMATICO;
+      g_Sal_IZQ_forzada = 1;
+      g_Sal_DER_forzada = 1;
       
       config_save_profile(); // Guardar los nuevos parámetros en flash
       xSemaphoreGive(xMutex_MPU_Data);
@@ -261,6 +263,8 @@ int Decodifico(String msg) {
   else if (elemento0.equals("MANUAL")) { // Usar else if
     if (xSemaphoreTake(xMutex_MPU_Data, portMAX_DELAY) == pdTRUE) {
       g_modo = MODO_MANUAL;
+      g_Sal_IZQ_forzada = 0;
+      g_Sal_DER_forzada = 0;
 
       config_save_profile(); // Guardar los nuevos parámetros en flash
       xSemaphoreGive(xMutex_MPU_Data);
